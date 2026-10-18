@@ -1,0 +1,116 @@
+<body>
+<div class="app-wrapper">
+<!-- ADMIN SIDEBAR -->
+<aside class="sidebar">
+<div class="sidebar-brand">
+<a class="sidebar-logo" href="../index.html">
+<div class="sidebar-logo-badge" style="background: #EF4444;"><i class="bi bi-shield-lock-fill"></i></div>
+<span>Prep<span style="color: #F87171;">Admin</span></span>
+</a>
+<span class="badge badge-danger" style="font-size: 10px;">CMS</span>
+</div>
+<div class="sidebar-content">
+<div class="nav-section-title">USERS &amp; ACCESS</div>
+<ul class="sidebar-nav">
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./dashboard.html"><i class="bi bi-speedometer2"></i> Dashboard</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./users.html"><i class="bi bi-people"></i> Users</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link active" href="./roles.html"><i class="bi bi-shield-check"></i> Roles &amp; Matrix</a></li>
+</ul>
+</div>
+</aside>
+<!-- MAIN VIEWPORT -->
+<div class="main-wrapper">
+<header class="topbar">
+<div class="topbar-left">
+<div class="breadcrumb">
+<a href="./dashboard.html">CMS</a>
+<span class="breadcrumb-separator">/</span>
+<span style="color: var(--color-text-primary); font-weight: 600;">Roles &amp; Access Matrix</span>
+</div>
+</div>
+<div class="topbar-right">
+<button class="btn btn-primary btn-sm" onclick="Toast.success('Role matrix permissions updated.', 'Saved')">
+<i class="bi bi-floppy"></i> Save Permission Matrix
+        </button>
+</div>
+</header>
+<main class="page-container">
+<div class="page-header">
+<div>
+<h1>Role-Based Access Control (RBAC) Matrix</h1>
+<p>Configure granular CRUD permissions across administrative entities.</p>
+</div>
+</div>
+<div class="table-container mb-6">
+<table class="table">
+<thead>
+<tr>
+<th>Entity / Resource</th>
+<th class="text-center">View (Read)</th>
+<th class="text-center">Create</th>
+<th class="text-center">Edit (Update)</th>
+<th class="text-center">Delete (Destroy)</th>
+<th class="text-center">Publish</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Topics &amp; Hierarchies</strong></td>
+<td class="text-center"><input checked="" type="checkbox"/></td>
+<td class="text-center"><input checked="" type="checkbox"/></td>
+<td class="text-center"><input checked="" type="checkbox"/></td>
+<td class="text-center"><input checked="" type="checkbox"/></td>
+<td class="text-center"><input checked="" type="checkbox"/></td>
+</tr>
+<tr>
+<td><strong>Rich Technical Content &amp; Notes</strong></td>
+<td class="text-center"><input checked="" type="checkbox"/></td>
+<td class="text-center"><input checked="" type="checkbox"/></td>
+<td class="text-center"><input checked="" type="checkbox"/></td>
+<td class="text-center"><input checked="" type="checkbox"/></td>
+<td class="text-center"><input checked="" type="checkbox"/></td>
+</tr>
+<tr>
+<td><strong>Question Bank &amp; MCQs</strong></td>
+<td class="text-center"><input checked="" type="checkbox"/></td>
+<td class="text-center"><input checked="" type="checkbox"/></td>
+<td class="text-center"><input checked="" type="checkbox"/></td>
+<td class="text-center"><input checked="" type="checkbox"/></td>
+<td class="text-center"><input checked="" type="checkbox"/></td>
+</tr>
+<tr>
+<td><strong>Candidate Users &amp; Profiles</strong></td>
+<td class="text-center"><input checked="" type="checkbox"/></td>
+<td class="text-center"><input type="checkbox"/></td>
+<td class="text-center"><input checked="" type="checkbox"/></td>
+<td class="text-center"><input type="checkbox"/></td>
+<td class="text-center"><input type="checkbox"/></td>
+</tr>
+<tr>
+<td><strong>System Automation Rules &amp; Queues</strong></td>
+<td class="text-center"><input checked="" type="checkbox"/></td>
+<td class="text-center"><input checked="" type="checkbox"/></td>
+<td class="text-center"><input checked="" type="checkbox"/></td>
+<td class="text-center"><input checked="" type="checkbox"/></td>
+<td class="text-center"><input checked="" type="checkbox"/></td>
+</tr>
+<tr>
+<td><strong>Audit Logs &amp; Security Telemetry</strong></td>
+<td class="text-center"><input checked="" type="checkbox"/></td>
+<td class="text-center"><input type="checkbox"/></td>
+<td class="text-center"><input type="checkbox"/></td>
+<td class="text-center"><input type="checkbox"/></td>
+<td class="text-center"><input type="checkbox"/></td>
+</tr>
+</tbody>
+</table>
+</div>
+</main>
+</div>
+</div>
+
+
+
+
+
+</body>

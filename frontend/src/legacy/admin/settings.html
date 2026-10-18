@@ -1,0 +1,87 @@
+<body>
+<div class="app-wrapper">
+<!-- ADMIN SIDEBAR -->
+<aside class="sidebar">
+<div class="sidebar-brand">
+<a class="sidebar-logo" href="../index.html">
+<div class="sidebar-logo-badge" style="background: #EF4444;"><i class="bi bi-shield-lock-fill"></i></div>
+<span>Prep<span style="color: #F87171;">Admin</span></span>
+</a>
+<span class="badge badge-danger" style="font-size: 10px;">CMS</span>
+</div>
+<div class="sidebar-content">
+<div class="nav-section-title">AUDIT &amp; ANALYTICS</div>
+<ul class="sidebar-nav">
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./dashboard.html"><i class="bi bi-speedometer2"></i> Dashboard</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./analytics.html"><i class="bi bi-graph-up"></i> Analytics</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./reports.html"><i class="bi bi-file-earmark-bar-graph"></i> Reports</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./audit-logs.html"><i class="bi bi-journal-check"></i> Audit Logs</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link active" href="./settings.html"><i class="bi bi-gear"></i> Settings</a></li>
+</ul>
+</div>
+</aside>
+<!-- MAIN VIEWPORT -->
+<div class="main-wrapper">
+<header class="topbar">
+<div class="topbar-left">
+<div class="breadcrumb">
+<a href="./dashboard.html">CMS</a>
+<span class="breadcrumb-separator">/</span>
+<span style="color: var(--color-text-primary); font-weight: 600;">System Settings</span>
+</div>
+</div>
+<div class="topbar-right">
+<button class="btn btn-primary btn-sm" onclick="Toast.success('System settings saved successfully.', 'Saved')">
+<i class="bi bi-floppy"></i> Save System Config
+        </button>
+</div>
+</header>
+<main class="page-container" style="max-width: 900px;">
+<div class="page-header">
+<div>
+<h1>Global Platform System Settings</h1>
+<p>Configure API integrations, maintenance mode toggles, and global auto-apply safety guards.</p>
+</div>
+</div>
+<div class="card p-6 mb-6">
+<h3 class="h3 mb-4">Platform Security &amp; Safeguards</h3>
+<div class="d-flex justify-content-between align-items-center py-3" style="border-bottom: 1px solid var(--color-divider);">
+<div>
+<div class="fw-semibold text-sm">Global Human-in-the-Loop Safety Lock</div>
+<div class="text-xs text-muted">Prevent any candidate from enabling automated submission without prior review step</div>
+</div>
+<label class="form-switch">
+<input checked="" type="checkbox"/>
+<span class="switch-slider"></span>
+</label>
+</div>
+<div class="d-flex justify-content-between align-items-center py-3" style="border-bottom: 1px solid var(--color-divider);">
+<div>
+<div class="fw-semibold text-sm">AI Scraper Rate Limiting</div>
+<div class="text-xs text-muted">Respect career portal robots.txt and apply jitter delays to prevent IP bans</div>
+</div>
+<label class="form-switch">
+<input checked="" type="checkbox"/>
+<span class="switch-slider"></span>
+</label>
+</div>
+<div class="d-flex justify-content-between align-items-center py-3">
+<div>
+<div class="fw-semibold text-sm">Maintenance Mode</div>
+<div class="text-xs text-muted">Show friendly maintenance banner to non-admin candidates during schema migrations</div>
+</div>
+<label class="form-switch">
+<input type="checkbox"/>
+<span class="switch-slider"></span>
+</label>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+
+
+
+
+</body>

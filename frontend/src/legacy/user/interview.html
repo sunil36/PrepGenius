@@ -1,0 +1,133 @@
+<body>
+<div class="app-wrapper">
+<!-- USER SIDEBAR -->
+<aside class="sidebar">
+<div class="sidebar-brand">
+<a class="sidebar-logo" href="../index.html">
+<div class="sidebar-logo-badge"><i class="bi bi-compass"></i></div>
+<span>Prep<span style="color: #38BDF8;">Pilot</span></span>
+</a>
+</div>
+<div class="sidebar-content">
+<div class="nav-section-title">SIMULATION</div>
+<ul class="sidebar-nav">
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./dashboard.html"><i class="bi bi-x-circle"></i> <span>Exit Interview</span></a></li>
+</ul>
+<div class="nav-section-title">INTERVIEW ROUNDS (04 / 15)</div>
+<ul class="sidebar-nav">
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="#"><i class="bi bi-check-circle-fill text-success"></i> <span>1. Concurrency Models</span></a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="#"><i class="bi bi-check-circle-fill text-success"></i> <span>2. C3 Linearization</span></a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="#"><i class="bi bi-check-circle-fill text-success"></i> <span>3. Redis Caching &amp; Lock</span></a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link active" href="#"><i class="bi bi-arrow-right-circle-fill text-primary"></i> <span>4. Distributed Transactions</span></a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="#"><i class="bi bi-circle"></i> <span>5. Microservice Resiliency</span></a></li>
+</ul>
+</div>
+</aside>
+<!-- MAIN VIEWPORT -->
+<div class="main-wrapper">
+<header class="topbar">
+<div class="topbar-left">
+<span class="badge badge-primary">Technical Round: Distributed Systems &amp; Python</span>
+</div>
+<div class="topbar-right">
+<button class="btn-icon theme-toggle-btn" title="Toggle Light/Dark Mode">
+<i class="bi bi-moon-stars"></i>
+</button>
+<div class="d-flex align-items-center gap-2" style="font-family: var(--font-mono); font-size: 15px; font-weight: 700; color: var(--color-danger);">
+<i class="bi bi-stopwatch"></i> <span id="interview-timer">18:42</span>
+</div>
+</div>
+</header>
+<main class="page-container" style="max-width: 1140px;">
+<!-- Video Simulator & Live Voice Telemetry Grid -->
+<div class="grid-3 mb-6" style="grid-template-columns: 2fr 1fr;">
+<!-- Left: Video Feed -->
+<div class="interview-video-box" style="height: 260px;">
+<div class="recording-indicator">
+<div class="pulse-dot"></div> AI TELEMETRY ACTIVE
+          </div>
+<div style="font-size: 48px; color: #334155; margin-bottom: 8px;">
+<i class="bi bi-person-video"></i>
+</div>
+<div style="font-size: 13px; font-weight: 500; color: #94A3B8;">Candidate Camera &amp; Audio Live Stream Feed</div>
+<!-- Audio Wave Visualizer Overlay -->
+<div class="audio-visualizer-bar mt-3">
+<div class="audio-bar-chunk" style="animation-delay: 0.1s;"></div>
+<div class="audio-bar-chunk" style="animation-delay: 0.3s;"></div>
+<div class="audio-bar-chunk" style="animation-delay: 0.2s;"></div>
+<div class="audio-bar-chunk" style="animation-delay: 0.5s;"></div>
+<div class="audio-bar-chunk" style="animation-delay: 0.4s;"></div>
+<div class="audio-bar-chunk" style="animation-delay: 0.2s;"></div>
+<div class="audio-bar-chunk" style="animation-delay: 0.6s;"></div>
+</div>
+</div>
+<!-- Right: Real-time Telemetry Metrics -->
+<div class="card p-4 d-flex flex-column justify-content-between">
+<div>
+<div class="text-xs text-muted fw-bold mb-3" style="letter-spacing: 0.05em;"><i class="bi bi-activity text-primary"></i> LIVE SPEECH TELEMETRY</div>
+<!-- WPM -->
+<div class="d-flex justify-content-between text-xs mb-1">
+<span>Speech Cadence (WPM)</span>
+<strong class="text-success" id="live-wpm">134 WPM (Ideal)</strong>
+</div>
+<div class="progress mb-3"><div class="progress-bar progress-bar-success" id="bar-wpm" style="width: 72%;"></div></div>
+<!-- Filler Words -->
+<div class="d-flex justify-content-between text-xs mb-1">
+<span>Filler Words Detected</span>
+<strong class="text-warning" id="live-fillers">1 ("basically")</strong>
+</div>
+<div class="progress mb-3"><div class="progress-bar progress-bar-warning" style="width: 15%;"></div></div>
+<!-- Eye Contact Confidence -->
+<div class="d-flex justify-content-between text-xs mb-1">
+<span>Eye Contact &amp; Confidence</span>
+<strong class="text-success">92% High</strong>
+</div>
+<div class="progress mb-2"><div class="progress-bar progress-bar-success" style="width: 92%;"></div></div>
+</div>
+<div class="callout callout-info p-2 mb-0" style="font-size: 11px;">
+<strong>AI Coach:</strong> Excellent pacing. Continue detailing the compensating transactions in your Saga response.
+          </div>
+</div>
+</div>
+<!-- Current Question Card -->
+<div class="card p-6 mb-6">
+<div class="d-flex justify-content-between align-items-center mb-3">
+<span class="badge badge-warning">Question 04 / 15</span>
+<span class="text-xs text-muted">Estimated time: 3 Minutes</span>
+</div>
+<h2 style="font-size: 20px; font-weight: 700; line-height: 1.4; margin-bottom: 16px;">
+          How do you design an ACID-compliant distributed transaction across two independent PostgreSQL microservice databases without introducing a single point of failure in two-phase commit (2PC)?
+        </h2>
+<div class="form-group mb-4">
+<label class="form-label d-flex justify-content-between align-items-center">
+<span>Your Live Verbal &amp; Text Answer Input</span>
+<button class="btn btn-outline btn-sm" onclick="simulateLiveVoiceInput()" style="padding: 2px 8px; font-size: 11px;">
+<i class="bi bi-mic"></i> Simulate Live Speech
+            </button>
+</label>
+<textarea class="form-control" id="interview-answer-input" oninput="analyzeSpeechMetrics(this.value)" placeholder="Speak into microphone or type your architectural breakdown (e.g. SAGA Orchestration pattern vs Outbox Pattern)..." rows="6">I would recommend implementing the SAGA Pattern with asynchronous event-driven choreography using transactional outbox tables. Each microservice records local state transitions and emits compensating events if downstream steps fail, basically avoiding synchronous 2PC blocking bottlenecks.</textarea>
+</div>
+<div class="d-flex justify-content-between align-items-center">
+<button class="btn btn-secondary btn-sm" onclick="Toast.info('Hint: Think about the Saga Pattern and Compensating Transactions.', 'Hint')">
+<i class="bi bi-lightbulb"></i> View Hint
+          </button>
+<div class="d-flex gap-2">
+<button class="btn btn-secondary btn-sm" onclick="Toast.info('Skipped question.', 'Skipped')">
+              Skip
+            </button>
+<a class="btn btn-primary btn-sm" href="./interview-result.html">
+              Submit Answer &amp; Conclude Session <i class="bi bi-arrow-right"></i>
+</a>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+
+
+
+
+
+</body>

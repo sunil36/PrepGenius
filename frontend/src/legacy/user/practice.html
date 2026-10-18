@@ -1,0 +1,173 @@
+<body>
+<div class="app-wrapper">
+<!-- USER SIDEBAR -->
+<aside class="sidebar">
+<div class="sidebar-brand">
+<a class="sidebar-logo" href="../index.html">
+<div class="sidebar-logo-badge"><i class="bi bi-compass"></i></div>
+<span>Prep<span style="color: #38BDF8;">Pilot</span></span>
+</a>
+<span class="badge badge-primary" style="font-size: 10px;">User</span>
+</div>
+<div class="sidebar-content">
+<div class="nav-section-title">PRACTICE SUITE</div>
+<ul class="sidebar-nav">
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./dashboard.html"><i class="bi bi-grid-1x2"></i> <span>Dashboard</span></a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link active" href="./practice.html"><i class="bi bi-lightning"></i> <span>Practice &amp; Code</span></a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./system-design.html"><i class="bi bi-diagram-3"></i> <span>System Design Canvas</span></a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./flashcards.html"><i class="bi bi-card-checklist"></i> <span>Spaced Flashcards (SRS)</span></a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./interview.html"><i class="bi bi-camera-video"></i> <span>Mock Interview</span></a></li>
+</ul>
+<div class="nav-section-title">CAREER &amp; AUTOMATION</div>
+<ul class="sidebar-nav">
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./resume.html"><i class="bi bi-file-earmark-person"></i> <span>Resumes &amp; ATS</span></a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./jobs.html"><i class="bi bi-briefcase"></i> <span>Find Jobs</span></a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./salary-negotiator.html"><i class="bi bi-cash-stack"></i> <span>Salary &amp; Negotiation</span></a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./automation.html"><i class="bi bi-robot"></i> <span>Auto-Apply Rules</span></a></li>
+</ul>
+</div>
+</aside>
+<!-- MAIN VIEWPORT -->
+<div class="main-wrapper">
+<header class="topbar">
+<div class="topbar-left">
+<div class="breadcrumb">
+<a href="./dashboard.html">Home</a>
+<span class="breadcrumb-separator">/</span>
+<span style="color: var(--color-text-primary); font-weight: 500;">Practice &amp; Test Suite Runner</span>
+</div>
+</div>
+<div class="topbar-right">
+<button class="btn-icon theme-toggle-btn" title="Toggle Light/Dark Mode">
+<i class="bi bi-moon-stars"></i>
+</button>
+<div class="global-search-trigger">
+<i class="bi bi-search"></i>
+<span>Search questions...</span>
+<span class="search-shortcut">Ctrl+K</span>
+</div>
+</div>
+</header>
+<main class="page-container">
+<div class="page-header">
+<div>
+<h1>Practice Engineering &amp; Conceptual Problems</h1>
+<p>Reinforce your mastery with targeted MCQs, conceptual breakdowns, and code implementations.</p>
+</div>
+</div>
+<!-- Practice Type Tabs -->
+<div class="nav-tabs-custom">
+<div class="nav-tab-item active" onclick="switchPracticeTab('mcqs', this)">
+<i class="bi bi-check2-circle"></i> Multiple Choice (MCQs)
+        </div>
+<div class="nav-tab-item" onclick="switchPracticeTab('coding', this)">
+<i class="bi bi-code-slash"></i> Live Code Sandbox &amp; Tests
+        </div>
+<div class="nav-tab-item" onclick="switchPracticeTab('conceptual', this)">
+<i class="bi bi-chat-square-text"></i> Conceptual Q&amp;A
+        </div>
+</div>
+<!-- MCQs Section -->
+<div id="tab-mcqs">
+<div class="card p-6 mb-6">
+<div class="d-flex justify-content-between align-items-center mb-4">
+<span class="badge badge-primary">Question 01 of 12</span>
+<span class="text-xs text-muted">Topic: Python MRO &amp; Linearization • 72% Accuracy Rate</span>
+</div>
+<h2 style="font-size: 18px; font-weight: 600; line-height: 1.4; margin-bottom: 20px;">
+            What is the output of inspecting the <code>__mro__</code> of a class defined as <code>class D(B, C): pass</code> where classes <code>B</code> and <code>C</code> both inherit from base class <code>A</code>?
+          </h2>
+<div class="d-flex flex-column gap-3 mb-4" id="mcq-options-container">
+<label class="card p-3 d-flex align-items-center gap-3 cursor-pointer" onclick="selectOption('A', this)" style="border: 1px solid var(--color-border);">
+<input name="mcq-option" type="radio" value="A"/>
+<span class="text-sm">A. <code>[D, B, A, C, object]</code></span>
+</label>
+<label class="card p-3 d-flex align-items-center gap-3 cursor-pointer" onclick="selectOption('B', this)" style="border: 1px solid var(--color-border);">
+<input name="mcq-option" type="radio" value="B"/>
+<span class="text-sm">B. <code>[D, B, C, A, object]</code> (Correct C3 Order)</span>
+</label>
+<label class="card p-3 d-flex align-items-center gap-3 cursor-pointer" onclick="selectOption('C', this)" style="border: 1px solid var(--color-border);">
+<input name="mcq-option" type="radio" value="C"/>
+<span class="text-sm">C. <code>[D, C, B, A, object]</code></span>
+</label>
+<label class="card p-3 d-flex align-items-center gap-3 cursor-pointer" onclick="selectOption('D', this)" style="border: 1px solid var(--color-border);">
+<input name="mcq-option" type="radio" value="D"/>
+<span class="text-sm">D. <code>[D, A, B, C, object]</code></span>
+</label>
+</div>
+<div class="d-none mb-4" id="mcq-explanation"></div>
+<div class="d-flex justify-content-between">
+<button class="btn btn-secondary btn-sm" disabled=""><i class="bi bi-chevron-left"></i> Previous</button>
+<button class="btn btn-primary btn-sm" id="btn-submit-mcq" onclick="checkMCQAnswer()">
+              Submit &amp; Check Answer
+            </button>
+</div>
+</div>
+</div>
+<!-- Live Coding & Test Suite Sandbox -->
+<div class="d-none" id="tab-coding">
+<div class="card p-6 mb-6">
+<div class="d-flex justify-content-between align-items-start mb-3">
+<div>
+<span class="badge badge-danger mb-2">Hard</span>
+<h2 style="font-size: 20px; font-weight: 700;">Implement a Thread-Safe Singleton Metaclass</h2>
+</div>
+<button class="btn btn-primary btn-sm" onclick="runLiveCodeSandbox()">
+<i class="bi bi-play-fill"></i> Run In-Browser Test Suite
+            </button>
+</div>
+<p class="text-sm text-secondary mb-4">
+            Create a metaclass <code>SingletonMeta</code> in Python that guarantees only one instance of any class can ever be instantiated, even under high multi-threaded contention.
+          </p>
+<div class="code-editor-box mb-4">
+<div class="code-editor-header">
+<span><i class="bi bi-filetype-py"></i> solution.py</span>
+<span>Python 3.12 (Client-Side Test Runner)</span>
+</div>
+<textarea class="code-editor-textarea" id="live-code-textarea">import threading
+
+class SingletonMeta(type):
+    _instances = {}
+    _lock = threading.Lock()
+
+    def __call__(cls, *args, **kwargs):
+        # Double-checked locking optimization
+        if cls not in cls._instances:
+            with cls._lock:
+                if cls not in cls._instances:
+                    instance = super().__call__(*args, **kwargs)
+                    cls._instances[cls] = instance
+        return cls._instances[cls]
+
+class DatabasePool(metaclass=SingletonMeta):
+    def __init__(self):
+        self.connection_count = 10</textarea>
+</div>
+<!-- Real-Time Test Suite Execution Console -->
+<div class="p-4 rounded d-none" id="test-suite-console" style="background: #090D16; border: 1px solid #1E293B; font-family: var(--font-mono); font-size: 13px;">
+<div class="d-flex justify-content-between text-xs text-muted mb-3 pb-2" style="border-bottom: 1px solid #1E293B;">
+<span>TEST RESULTS CONSOLE</span>
+<span class="text-success" id="test-exec-time">Execution Time: 12ms</span>
+</div>
+<div class="d-flex flex-column gap-2" id="test-cases-output">
+<!-- Dynamically populated -->
+</div>
+</div>
+</div>
+</div>
+<!-- Conceptual Section -->
+<div class="d-none" id="tab-conceptual">
+<div class="d-flex flex-column gap-4" id="conceptual-list">
+<!-- Populated from API -->
+</div>
+</div>
+</main>
+</div>
+</div>
+
+
+
+
+
+
+</body>

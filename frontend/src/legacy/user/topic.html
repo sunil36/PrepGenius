@@ -1,0 +1,168 @@
+<body>
+<div class="app-wrapper">
+<!-- USER SIDEBAR -->
+<aside class="sidebar">
+<div class="sidebar-brand">
+<a class="sidebar-logo" href="../index.html">
+<div class="sidebar-logo-badge"><i class="bi bi-compass"></i></div>
+<span>Prep<span style="color: #38BDF8;">Pilot</span></span>
+</a>
+</div>
+<div class="sidebar-content">
+<div class="nav-section-title">LEARN</div>
+<ul class="sidebar-nav">
+<li class="sidebar-nav-item">
+<a class="sidebar-nav-link" href="./learn.html">
+<i class="bi bi-arrow-left"></i> <span>Back to Paths</span>
+</a>
+</li>
+</ul>
+<div class="nav-section-title">PYTHON OOP TOPIC HIERARCHY</div>
+<ul class="sidebar-nav" id="subtopic-sidebar-tree">
+<li class="sidebar-nav-item">
+<a class="sidebar-nav-link" href="#sub-1"><i class="bi bi-circle"></i> <span>1. Self &amp; __init__ vs __new__</span></a>
+</li>
+<li class="sidebar-nav-item">
+<a class="sidebar-nav-link" href="#sub-2"><i class="bi bi-circle"></i> <span>2. Encapsulation &amp; Mangling</span></a>
+</li>
+<li class="sidebar-nav-item">
+<a class="sidebar-nav-link active" href="#sub-3"><i class="bi bi-check-circle-fill text-primary"></i> <span>3. Multiple Inheritance &amp; MRO</span></a>
+</li>
+<li class="sidebar-nav-item">
+<a class="sidebar-nav-link" href="#sub-4"><i class="bi bi-circle"></i> <span>4. Polymorphism &amp; ABCs</span></a>
+</li>
+<li class="sidebar-nav-item">
+<a class="sidebar-nav-link" href="#sub-5"><i class="bi bi-circle"></i> <span>5. Properties &amp; Descriptors</span></a>
+</li>
+</ul>
+</div>
+</aside>
+<!-- MAIN VIEWPORT -->
+<div class="main-wrapper">
+<header class="topbar">
+<div class="topbar-left">
+<div class="breadcrumb">
+<a href="./learn.html">Backend Development</a>
+<span class="breadcrumb-separator">/</span>
+<a href="./learn.html">Python</a>
+<span class="breadcrumb-separator">/</span>
+<span style="color: var(--color-text-primary); font-weight: 600;">Method Resolution Order (MRO)</span>
+</div>
+</div>
+<div class="topbar-right">
+<button class="btn btn-secondary btn-sm" id="btn-bookmark" onclick="toggleBookmark()">
+<i class="bi bi-bookmark"></i> Bookmark Topic
+        </button>
+<a class="btn btn-primary btn-sm" href="./practice.html">
+<i class="bi bi-lightning"></i> Practice Questions (18)
+        </a>
+</div>
+</header>
+<main class="page-container" style="max-width: 1040px;">
+<!-- Topic Header Card -->
+<div class="card p-6 mb-6">
+<div class="d-flex align-items-center gap-2 mb-2">
+<span class="badge badge-primary">Python</span>
+<span class="badge badge-warning">Advanced</span>
+<span class="text-xs text-muted"><i class="bi bi-clock"></i> 8 Min Read • Updated Sept 2026</span>
+</div>
+<h1 style="font-size: 28px; font-weight: 800; margin-bottom: 8px;">
+          Method Resolution Order (MRO) &amp; C3 Linearization
+        </h1>
+<p style="font-size: 15px; color: var(--color-text-secondary); margin-bottom: 0;">
+          Master Python's deterministic resolution graph for multiple inheritance, dynamic delegation via <code>super()</code>, and how to avoid cyclic diamond dependency errors in large codebases.
+        </p>
+</div>
+<!-- Rich Topic Content Container -->
+<div class="card p-6 mb-6">
+<div id="topic-rich-content">
+<h3>1. Why Does Python Need C3 Linearization?</h3>
+<p>
+            When a class inherits from multiple parents, an ambiguous inheritance diamond can emerge. Python 2.2 and earlier used a naive depth-first search that broke monotonicity in complex hierarchies. Starting in Python 2.3, Guido van Rossum adopted the <strong>C3 Linearization Algorithm</strong>, guaranteeing:
+          </p>
+<ul>
+<li class="mb-2"><strong>Subclasses precede their parents:</strong> If class <code>D</code> inherits from <code>B</code>, <code>D</code> is always checked before <code>B</code>.</li>
+<li class="mb-2"><strong>Parent ordering is preserved:</strong> If declared as <code>class D(B, C)</code>, <code>B</code> and its ancestry will always take precedence over <code>C</code>.</li>
+<li class="mb-2"><strong>Monotonicity:</strong> A class always precedes its superclasses across all subtrees.</li>
+</ul>
+<div class="callout callout-info mt-4 mb-4">
+<strong>Architecture Note:</strong> Attempting to create an inheritance graph that violates C3 will raise a compile-time <code>TypeError: Cannot create a consistent method resolution order (MRO)</code>.
+          </div>
+<h3>2. Interactive Code Example &amp; Execution Graph</h3>
+<pre><code>class Base:
+    def execute(self):
+        return ["Base"]
+
+class WorkerA(Base):
+    def execute(self):
+        return ["WorkerA"] + super().execute()
+
+class WorkerB(Base):
+    def execute(self):
+        return ["WorkerB"] + super().execute()
+
+class DistributedPipeline(WorkerA, WorkerB):
+    def execute(self):
+        return ["Pipeline"] + super().execute()
+
+# Inspect Resolution Order:
+pipeline = DistributedPipeline()
+print(DistributedPipeline.__mro__)
+# Resolution: (DistributedPipeline, WorkerA, WorkerB, Base, object)
+
+print(pipeline.execute())
+# Output: ['Pipeline', 'WorkerA', 'WorkerB', 'Base']</code></pre>
+<h3 class="mt-4">3. Common Senior Interview Pitfalls</h3>
+<div class="callout callout-warning">
+<strong>The "Super() calls the parent" myth:</strong> Many candidates state that <code>super()</code> calls the parent class. In <code>WorkerA</code> above, <code>super().execute()</code> actually calls <code>WorkerB.execute()</code> because <code>WorkerB</code> is the next item in <code>DistributedPipeline</code>'s MRO!
+          </div>
+</div>
+</div>
+<!-- Conceptual Interview Questions in this Topic -->
+<h2 class="h2 mb-4">Interview Questions for this Topic</h2>
+<div class="d-flex flex-column gap-4 mb-6">
+<div class="card p-5">
+<div class="d-flex justify-content-between align-items-start mb-2">
+<span class="badge badge-primary">Conceptual</span>
+<span class="badge badge-neutral">Difficulty: Intermediate</span>
+</div>
+<h3 class="h3 mb-2">Explain the difference between __new__ and __init__ in Python.</h3>
+<p class="text-sm text-secondary mb-3">
+<strong>Short Answer:</strong> <code>__new__</code> is the static creator method that actually instantiates and returns the object instance in memory, while <code>__init__</code> is the initializer method that configures attributes on that created instance.
+          </p>
+<div class="callout callout-success p-3 text-xs mb-0">
+<strong>💡 Senior Interview Tip:</strong> Mention immutable types (like tuple or int subclassing) and thread-safe singleton design patterns as classic use-cases for overriding <code>__new__</code>.
+          </div>
+</div>
+<div class="card p-5">
+<div class="d-flex justify-content-between align-items-start mb-2">
+<span class="badge badge-primary">Conceptual</span>
+<span class="badge badge-neutral">Difficulty: Intermediate</span>
+</div>
+<h3 class="h3 mb-2">How does Python implement Encapsulation and Name Mangling for private members?</h3>
+<p class="text-sm text-secondary mb-3">
+<strong>Short Answer:</strong> Python does not enforce true private variables at runtime bytecode level. Double leading underscores (e.g. <code>__var</code>) trigger name mangling, transforming the attribute name to <code>_ClassName__var</code> to prevent accidental subclass override.
+          </p>
+<div class="callout callout-success p-3 text-xs mb-0">
+<strong>💡 Senior Interview Tip:</strong> Demonstrate that you know private attributes can still be accessed via <code>obj._ClassName__var</code> if someone deliberately intends to.
+          </div>
+</div>
+</div>
+<!-- Action Navigation Footer -->
+<div class="d-flex justify-content-between align-items-center p-4 rounded mb-6" style="background: var(--color-surface); border: 1px solid var(--color-border);">
+<a class="btn btn-secondary btn-sm" href="./learn.html"><i class="bi bi-arrow-left"></i> Previous: Classes &amp; Instances</a>
+<button class="btn btn-success btn-sm" onclick="Toast.success('Topic marked as 100% completed!', 'Progress Saved')">
+<i class="bi bi-check-lg"></i> Mark Topic as Complete
+        </button>
+<a class="btn btn-primary btn-sm" href="./practice.html">Next: Practice MCQs &amp; Problems <i class="bi bi-arrow-right"></i></a>
+</div>
+</main>
+</div>
+</div>
+
+
+
+
+
+
+</body>

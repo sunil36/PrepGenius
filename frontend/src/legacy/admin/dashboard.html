@@ -1,0 +1,172 @@
+<body>
+<div class="app-wrapper">
+<!-- ADMIN SIDEBAR -->
+<aside class="sidebar">
+<div class="sidebar-brand">
+<a class="sidebar-logo" href="../index.html">
+<div class="sidebar-logo-badge" style="background: linear-gradient(135deg, #EF4444 0%, #B91C1C 100%);"><i class="bi bi-shield-lock-fill"></i></div>
+<span>Prep<span style="color: #F87171;">Admin</span></span>
+</a>
+<span class="badge badge-danger" style="font-size: 10px;">CMS</span>
+</div>
+<div class="sidebar-content">
+<div class="nav-section-title">OVERVIEW</div>
+<ul class="sidebar-nav">
+<li class="sidebar-nav-item"><a class="sidebar-nav-link active" href="./dashboard.html"><i class="bi bi-speedometer2"></i> Dashboard</a></li>
+</ul>
+<div class="nav-section-title">CONTENT MANAGEMENT</div>
+<ul class="sidebar-nav">
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./categories.html"><i class="bi bi-folder2"></i> Categories</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./technologies.html"><i class="bi bi-cpu"></i> Technologies</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./topics.html"><i class="bi bi-layers"></i> Topics</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./subtopics.html"><i class="bi bi-diagram-2"></i> Subtopics</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./content.html"><i class="bi bi-file-earmark-richtext"></i> Content Library</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./questions.html"><i class="bi bi-question-circle"></i> Question Bank</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./mcqs.html"><i class="bi bi-ui-checks"></i> MCQs</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./coding-problems.html"><i class="bi bi-code-square"></i> Coding Problems</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./learning-paths.html"><i class="bi bi-signpost-split"></i> Learning Paths</a></li>
+</ul>
+<div class="nav-section-title">USERS &amp; ACCESS</div>
+<ul class="sidebar-nav">
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./users.html"><i class="bi bi-people"></i> Users</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./roles.html"><i class="bi bi-shield-check"></i> Roles &amp; Matrix</a></li>
+</ul>
+<div class="nav-section-title">CAREER INGESTION</div>
+<ul class="sidebar-nav">
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./jobs.html"><i class="bi bi-briefcase"></i> Job Feeds</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./job-sources.html"><i class="bi bi-plug"></i> Job Sources</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./applications.html"><i class="bi bi-send"></i> Applications</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./automation.html"><i class="bi bi-robot"></i> Automation Monitor</a></li>
+</ul>
+<div class="nav-section-title">AUDIT &amp; ANALYTICS</div>
+<ul class="sidebar-nav">
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./analytics.html"><i class="bi bi-graph-up"></i> Analytics</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./reports.html"><i class="bi bi-file-earmark-bar-graph"></i> Reports</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./audit-logs.html"><i class="bi bi-journal-check"></i> Audit Logs</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./settings.html"><i class="bi bi-gear"></i> System Settings</a></li>
+</ul>
+</div>
+<div class="sidebar-footer">
+<a class="btn btn-outline w-100 btn-sm mb-2" href="../user/dashboard.html" style="border-color: #334155; color: #94A3B8; font-size: 11px;">
+<i class="bi bi-person-badge"></i> Switch to Candidate App
+      </a>
+<div class="user-profile-widget">
+<div class="user-avatar" style="background-color: #EF4444;">EW</div>
+<div style="flex: 1; min-width: 0;">
+<div style="font-size: 13px; font-weight: 600; color: white;">Emma Watson</div>
+<div style="font-size: 11px; color: #94A3B8;">Principal Content Admin</div>
+</div>
+</div>
+</div>
+</aside>
+<!-- MAIN VIEWPORT -->
+<div class="main-wrapper">
+<header class="topbar">
+<div class="topbar-left">
+<div class="breadcrumb">
+<span style="color: var(--color-text-primary); font-weight: 700;">Admin Master Control Center</span>
+</div>
+</div>
+<div class="topbar-right">
+<div class="global-search-trigger">
+<i class="bi bi-search"></i>
+<span>Search CMS &amp; users...</span>
+<span class="search-shortcut">Ctrl+K</span>
+</div>
+<a class="btn btn-primary btn-sm" href="./content-editor.html">
+<i class="bi bi-plus-lg"></i> + Create Content
+        </a>
+</div>
+</header>
+<main class="page-container">
+<div class="page-header">
+<div>
+<h1>Platform Operations &amp; CMS Overview</h1>
+<p>Real-time telemetry across learning content health, user attempts, and job automation ingests.</p>
+</div>
+<div class="page-header-actions">
+<button class="btn btn-secondary btn-sm" onclick="Toast.info('Refreshed telemetry metrics.', 'Metrics Live')">
+<i class="bi bi-arrow-clockwise"></i> Refresh Metrics
+          </button>
+</div>
+</div>
+<!-- 8 Key Metrics Grid -->
+<div class="grid-4 mb-6">
+<div class="stat-card">
+<span class="stat-title">Registered Candidates</span>
+<div class="stat-value">3,842</div>
+<span class="stat-trend text-success"><i class="bi bi-arrow-up"></i> +14% this month</span>
+</div>
+<div class="stat-card">
+<span class="stat-title">Published Topics</span>
+<div class="stat-value text-primary">128</div>
+<span class="text-xs text-muted">Across 18 Technologies</span>
+</div>
+<div class="stat-card">
+<span class="stat-title">Question Bank Items</span>
+<div class="stat-value">1,420</div>
+<span class="text-xs text-muted">MCQs, Code &amp; Conceptual</span>
+</div>
+<div class="stat-card">
+<span class="stat-title">Automation Ingests Today</span>
+<div class="stat-value text-success">842</div>
+<span class="text-xs text-muted">Jobs scanned in last 24h</span>
+</div>
+</div>
+<!-- Content Management Quick Nav & Recent Audits -->
+<div class="grid-2 mb-6">
+<!-- CMS Quick Actions -->
+<div class="card p-6">
+<h3 class="h3 mb-4"><i class="bi bi-lightning-charge text-primary"></i> CMS Quick Jump</h3>
+<div class="grid-2">
+<a class="p-3 rounded d-flex align-items-center gap-3 hover-bg" href="./topics.html" style="background: var(--color-background-subtle); border: 1px solid var(--color-border); text-decoration: none; color: inherit;">
+<i class="bi bi-layers text-primary" style="font-size: 20px;"></i>
+<div>
+<strong class="text-sm">Manage Topics</strong>
+<div class="text-xs text-muted">Create &amp; Edit roadmaps</div>
+</div>
+</a>
+<a class="p-3 rounded d-flex align-items-center gap-3 hover-bg" href="./content-editor.html" style="background: var(--color-background-subtle); border: 1px solid var(--color-border); text-decoration: none; color: inherit;">
+<i class="bi bi-pencil-square text-success" style="font-size: 20px;"></i>
+<div>
+<strong class="text-sm">Content Editor</strong>
+<div class="text-xs text-muted">Rich notes &amp; code</div>
+</div>
+</a>
+<a class="p-3 rounded d-flex align-items-center gap-3 hover-bg" href="./questions.html" style="background: var(--color-background-subtle); border: 1px solid var(--color-border); text-decoration: none; color: inherit;">
+<i class="bi bi-question-circle text-warning" style="font-size: 20px;"></i>
+<div>
+<strong class="text-sm">Question Bank</strong>
+<div class="text-xs text-muted">1,420 questions</div>
+</div>
+</a>
+<a class="p-3 rounded d-flex align-items-center gap-3 hover-bg" href="./users.html" style="background: var(--color-background-subtle); border: 1px solid var(--color-border); text-decoration: none; color: inherit;">
+<i class="bi bi-people text-info" style="font-size: 20px;"></i>
+<div>
+<strong class="text-sm">User Directory</strong>
+<div class="text-xs text-muted">Roles &amp; Progress</div>
+</div>
+</a>
+</div>
+</div>
+<!-- Live Platform Audit Trail -->
+<div class="card p-6">
+<div class="d-flex justify-content-between align-items-center mb-4">
+<h3 class="h3 m-0"><i class="bi bi-journal-text text-danger"></i> Recent Audit Trail</h3>
+<a class="text-xs fw-semibold" href="./audit-logs.html">View All Logs →</a>
+</div>
+<div class="d-flex flex-column gap-3" id="admin-dashboard-audits">
+<!-- Populated from API -->
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+
+
+
+
+
+</body>

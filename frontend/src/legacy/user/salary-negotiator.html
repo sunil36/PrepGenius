@@ -1,0 +1,144 @@
+<body>
+<div class="app-wrapper">
+<!-- USER SIDEBAR -->
+<aside class="sidebar">
+<div class="sidebar-brand">
+<a class="sidebar-logo" href="../index.html">
+<div class="sidebar-logo-badge"><i class="bi bi-compass"></i></div>
+<span>Prep<span style="color: #38BDF8;">Pilot</span></span>
+</a>
+<span class="badge badge-primary" style="font-size: 10px;">User</span>
+</div>
+<div class="sidebar-content">
+<div class="nav-section-title">CAREER &amp; OFFERS</div>
+<ul class="sidebar-nav">
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./dashboard.html"><i class="bi bi-grid-1x2"></i> <span>Dashboard</span></a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./jobs.html"><i class="bi bi-briefcase"></i> <span>Find Jobs</span></a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link active" href="./salary-negotiator.html"><i class="bi bi-cash-stack"></i> <span>Salary &amp; Negotiation</span></a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./applications.html"><i class="bi bi-kanban"></i> <span>Applications Tracker</span></a></li>
+</ul>
+</div>
+</aside>
+<!-- MAIN VIEWPORT -->
+<div class="main-wrapper">
+<header class="topbar">
+<div class="topbar-left">
+<div class="breadcrumb">
+<a href="./dashboard.html">Career</a>
+<span class="breadcrumb-separator">/</span>
+<span style="color: var(--color-text-primary); font-weight: 600;">Compensation Benchmark &amp; Negotiation Copilot</span>
+</div>
+</div>
+<div class="topbar-right">
+<button class="btn-icon theme-toggle-btn" title="Toggle Light/Dark Mode">
+<i class="bi bi-moon-stars"></i>
+</button>
+</div>
+</header>
+<main class="page-container" style="max-width: 1140px;">
+<div class="page-header">
+<div>
+<h1>Salary Benchmark &amp; Counter-Offer Generator</h1>
+<p>Evaluate job offer packages against verified market compensation percentiles and draft respectful counter-offers.</p>
+</div>
+</div>
+<!-- Salary Calculator Grid -->
+<div class="grid-2 mb-6">
+<!-- Offer Input Breakdown -->
+<div class="card p-6">
+<h3 class="h3 mb-4"><i class="bi bi-calculator text-primary"></i> Current Offer Package</h3>
+<div class="form-group">
+<label class="form-label">Company &amp; Target Role</label>
+<input class="form-control" id="neg-company" type="text" value="Scale AI — Lead Backend Developer"/>
+</div>
+<div class="grid-2">
+<div class="form-group">
+<label class="form-label">Base Salary ($)</label>
+<input class="form-control" id="neg-base" oninput="calculateTotalComp()" type="number" value="195000"/>
+</div>
+<div class="form-group">
+<label class="form-label">Annual Equity / RSUs ($)</label>
+<input class="form-control" id="neg-equity" oninput="calculateTotalComp()" type="number" value="45000"/>
+</div>
+</div>
+<div class="grid-2">
+<div class="form-group">
+<label class="form-label">Signing Bonus ($)</label>
+<input class="form-control" id="neg-bonus" oninput="calculateTotalComp()" type="number" value="25000"/>
+</div>
+<div class="form-group">
+<label class="form-label">Target Counter Ask ($)</label>
+<input class="form-control" id="neg-ask" oninput="generateCounterEmail()" type="number" value="220000"/>
+</div>
+</div>
+<div class="p-3 rounded mt-2" style="background: var(--color-background-subtle); border: 1px solid var(--color-border);">
+<div class="d-flex justify-content-between align-items-center">
+<span class="text-xs text-muted fw-bold">TOTAL FIRST YEAR COMPENSATION (TC):</span>
+<strong class="text-success" id="total-comp-val" style="font-size: 20px;">$265,000 / yr</strong>
+</div>
+</div>
+</div>
+<!-- Market Benchmark Radar -->
+<div class="card p-6">
+<h3 class="h3 mb-4"><i class="bi bi-graph-up-arrow text-success"></i> Market Benchmark Percentiles (Senior Level)</h3>
+<div class="mb-4">
+<div class="d-flex justify-content-between text-xs mb-1">
+<span>25th Percentile (Standard Market)</span>
+<strong>$185,000 TC</strong>
+</div>
+<div class="progress"><div class="progress-bar" style="width: 25%;"></div></div>
+</div>
+<div class="mb-4">
+<div class="d-flex justify-content-between text-xs mb-1">
+<span>50th Percentile (Market Median)</span>
+<strong>$225,000 TC</strong>
+</div>
+<div class="progress"><div class="progress-bar" style="width: 50%;"></div></div>
+</div>
+<div class="mb-4">
+<div class="d-flex justify-content-between text-xs mb-1">
+<span>75th Percentile (Top Tier Tech Scaleups)</span>
+<strong>$265,000 TC (Your Offer)</strong>
+</div>
+<div class="progress"><div class="progress-bar progress-bar-success" style="width: 75%;"></div></div>
+</div>
+<div class="mb-2">
+<div class="d-flex justify-content-between text-xs mb-1">
+<span>90th Percentile (FAANG / AI Frontier Top Band)</span>
+<strong class="text-primary">$310,000 TC</strong>
+</div>
+<div class="progress"><div class="progress-bar progress-bar-primary" style="width: 90%;"></div></div>
+</div>
+</div>
+</div>
+<!-- Automated Counter-Offer Generator -->
+<div class="card p-6">
+<div class="d-flex justify-content-between align-items-center mb-3">
+<h3 class="h3 m-0"><i class="bi bi-envelope-paper text-primary"></i> AI-Drafted Professional Counter-Offer Script</h3>
+<button class="btn btn-secondary btn-sm" onclick="copyEmailScript()">
+<i class="bi bi-clipboard"></i> Copy to Clipboard
+          </button>
+</div>
+<div class="form-group mb-0">
+<textarea class="form-control" id="counter-offer-email" rows="8">Dear Recruiting Team,
+
+Thank you very much for extending the offer for the Lead Backend Developer position at Scale AI. I am thrilled about the opportunity to partner with the engineering team to scale high-throughput asynchronous data ingestion pipelines.
+
+Given my track record reducing p99 database latency by 45% and architecting fault-tolerant microservices handling 15,000+ requests/second, I am confident I will deliver immediate architectural impact. Based on market compensation benchmarks for Senior/Lead distributed systems engineers and my current interview cycle stages, I would be excited to sign immediately if we can adjust the base compensation to $220,000 with a $35,000 signing bonus.
+
+I am enthusiastic about joining Scale AI and look forward to hearing your thoughts.
+
+Best regards,
+Alex Johnson</textarea>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+
+
+
+
+
+</body>

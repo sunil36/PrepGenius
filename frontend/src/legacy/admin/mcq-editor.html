@@ -1,0 +1,103 @@
+<body>
+<div class="app-wrapper">
+<!-- ADMIN SIDEBAR -->
+<aside class="sidebar">
+<div class="sidebar-brand">
+<a class="sidebar-logo" href="../index.html">
+<div class="sidebar-logo-badge" style="background: #EF4444;"><i class="bi bi-shield-lock-fill"></i></div>
+<span>Prep<span style="color: #F87171;">Admin</span></span>
+</a>
+</div>
+<div class="sidebar-content">
+<div class="nav-section-title">MCQS</div>
+<ul class="sidebar-nav">
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./mcqs.html"><i class="bi bi-arrow-left"></i> <span>Back to MCQs</span></a></li>
+</ul>
+</div>
+</aside>
+<!-- MAIN VIEWPORT -->
+<div class="main-wrapper">
+<header class="topbar">
+<div class="topbar-left">
+<div class="breadcrumb">
+<a href="./mcqs.html">MCQs</a>
+<span class="breadcrumb-separator">/</span>
+<span style="color: var(--color-text-primary); font-weight: 600;">MCQ Editor</span>
+</div>
+</div>
+<div class="topbar-right">
+<button class="btn btn-primary btn-sm" onclick="saveMCQ()">
+<i class="bi bi-floppy"></i> Save MCQ
+        </button>
+</div>
+</header>
+<main class="page-container" style="max-width: 900px;">
+<div class="page-header">
+<div>
+<h1>Create / Edit MCQ Challenge</h1>
+<p>Configure question prompt, 4 candidate options, correct answer key, and explanation breakdown.</p>
+</div>
+</div>
+<div class="card p-6">
+<form id="mcq-form" onsubmit="event.preventDefault(); saveMCQ();">
+<div class="form-group">
+<label class="form-label">Question Text <span class="required">*</span></label>
+<textarea class="form-control" id="mcq-q" required="" rows="3">What is the output of inspecting the __mro__ of a class defined as class D(B, C): pass where classes B and C both inherit from base class A?</textarea>
+</div>
+<div class="grid-2 mb-4">
+<div class="form-group">
+<label class="form-label">Option A</label>
+<input class="form-control" id="opt-a" type="text" value="[D, B, A, C, object]"/>
+</div>
+<div class="form-group">
+<label class="form-label">Option B</label>
+<input class="form-control" id="opt-b" type="text" value="[D, B, C, A, object]"/>
+</div>
+<div class="form-group">
+<label class="form-label">Option C</label>
+<input class="form-control" id="opt-c" type="text" value="[D, C, B, A, object]"/>
+</div>
+<div class="form-group">
+<label class="form-label">Option D</label>
+<input class="form-control" id="opt-d" type="text" value="[D, A, B, C, object]"/>
+</div>
+</div>
+<div class="grid-2">
+<div class="form-group">
+<label class="form-label">Correct Option Selector <span class="required">*</span></label>
+<select class="form-select" id="mcq-correct">
+<option value="A">Option A</option>
+<option selected="" value="B">Option B (Correct)</option>
+<option value="C">Option C</option>
+<option value="D">Option D</option>
+</select>
+</div>
+<div class="form-group">
+<label class="form-label">Difficulty</label>
+<select class="form-select" id="mcq-diff">
+<option>Beginner</option>
+<option selected="">Intermediate</option>
+<option>Advanced</option>
+</select>
+</div>
+</div>
+<div class="form-group">
+<label class="form-label">Explanation</label>
+<textarea class="form-control" id="mcq-exp" rows="3">Under C3 Linearization, sibling classes B and C are evaluated depth-first but preserving local precedence order before reaching the shared common ancestor A.</textarea>
+</div>
+<div class="d-flex justify-content-end gap-2 pt-4" style="border-top: 1px solid var(--color-divider);">
+<a class="btn btn-secondary btn-sm" href="./mcqs.html">Cancel</a>
+<button class="btn btn-primary btn-sm" type="submit"><i class="bi bi-floppy"></i> Save MCQ</button>
+</div>
+</form>
+</div>
+</main>
+</div>
+</div>
+
+
+
+
+
+
+</body>

@@ -1,0 +1,78 @@
+<body>
+<div class="app-wrapper">
+<!-- ADMIN SIDEBAR -->
+<aside class="sidebar">
+<div class="sidebar-brand">
+<a class="sidebar-logo" href="../index.html">
+<div class="sidebar-logo-badge" style="background: #EF4444;"><i class="bi bi-shield-lock-fill"></i></div>
+<span>Prep<span style="color: #F87171;">Admin</span></span>
+</a>
+<span class="badge badge-danger" style="font-size: 10px;">CMS</span>
+</div>
+<div class="sidebar-content">
+<div class="nav-section-title">CONTENT MANAGEMENT</div>
+<ul class="sidebar-nav">
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./dashboard.html"><i class="bi bi-speedometer2"></i> Dashboard</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link active" href="./categories.html"><i class="bi bi-folder2"></i> Categories</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./technologies.html"><i class="bi bi-cpu"></i> Technologies</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./topics.html"><i class="bi bi-layers"></i> Topics</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./subtopics.html"><i class="bi bi-diagram-2"></i> Subtopics</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./content.html"><i class="bi bi-file-earmark-richtext"></i> Content Library</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./questions.html"><i class="bi bi-question-circle"></i> Question Bank</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./mcqs.html"><i class="bi bi-ui-checks"></i> MCQs</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./coding-problems.html"><i class="bi bi-code-square"></i> Coding Problems</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./learning-paths.html"><i class="bi bi-signpost-split"></i> Learning Paths</a></li>
+</ul>
+</div>
+</aside>
+<!-- MAIN VIEWPORT -->
+<div class="main-wrapper">
+<header class="topbar">
+<div class="topbar-left">
+<div class="breadcrumb">
+<a href="./dashboard.html">CMS</a>
+<span class="breadcrumb-separator">/</span>
+<span style="color: var(--color-text-primary); font-weight: 600;">Category Taxonomy</span>
+</div>
+</div>
+<div class="topbar-right">
+<a class="btn btn-primary btn-sm" href="./category-editor.html">
+<i class="bi bi-plus-lg"></i> + Add Category
+        </a>
+</div>
+</header>
+<main class="page-container">
+<div class="page-header">
+<div>
+<h1>Domain &amp; Category Taxonomies</h1>
+<p>Top-level architectural groupings for technologies, topics, and interview tracks.</p>
+</div>
+</div>
+<!-- Categories Table Container -->
+<div class="table-container mb-6">
+<table class="table">
+<thead>
+<tr>
+<th>Order</th>
+<th>Category Name &amp; Slug</th>
+<th>Description</th>
+<th>Technologies Count</th>
+<th>Status</th>
+<th style="text-align: right;">Actions</th>
+</tr>
+</thead>
+<tbody id="categories-table-body">
+<!-- Populated via API -->
+</tbody>
+</table>
+</div>
+</main>
+</div>
+</div>
+
+
+
+
+
+
+</body>

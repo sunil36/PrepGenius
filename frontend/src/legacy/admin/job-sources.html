@@ -1,0 +1,82 @@
+<body>
+<div class="app-wrapper">
+<!-- ADMIN SIDEBAR -->
+<aside class="sidebar">
+<div class="sidebar-brand">
+<a class="sidebar-logo" href="../index.html">
+<div class="sidebar-logo-badge" style="background: #EF4444;"><i class="bi bi-shield-lock-fill"></i></div>
+<span>Prep<span style="color: #F87171;">Admin</span></span>
+</a>
+</div>
+<div class="sidebar-content">
+<div class="nav-section-title">CAREER INGESTION</div>
+<ul class="sidebar-nav">
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./dashboard.html"><i class="bi bi-speedometer2"></i> Dashboard</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./jobs.html"><i class="bi bi-briefcase"></i> Job Feeds</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link active" href="./job-sources.html"><i class="bi bi-plug"></i> Job Sources</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./applications.html"><i class="bi bi-send"></i> Applications</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./automation.html"><i class="bi bi-robot"></i> Automation Monitor</a></li>
+</ul>
+</div>
+</aside>
+<!-- MAIN VIEWPORT -->
+<div class="main-wrapper">
+<header class="topbar">
+<div class="topbar-left">
+<div class="breadcrumb">
+<a href="./dashboard.html">CMS</a>
+<span class="breadcrumb-separator">/</span>
+<span style="color: var(--color-text-primary); font-weight: 600;">Job Feeds &amp; Connectors</span>
+</div>
+</div>
+<div class="topbar-right">
+<button class="btn btn-primary btn-sm" onclick="Toast.info('New ingest connector modal placeholder.', 'Connector Ready')">
+<i class="bi bi-plus-lg"></i> + Add Ingest Connector
+        </button>
+</div>
+</header>
+<main class="page-container">
+<div class="page-header">
+<div>
+<h1>Automated Job Ingestion Sources</h1>
+<p>Configure automated scrapers and webhooks from Greenhouse, Lever, and Career Portals.</p>
+</div>
+</div>
+<div class="grid-3 mb-6">
+<div class="card p-5">
+<div class="d-flex justify-content-between align-items-center mb-3">
+<h3 class="h3 m-0">Greenhouse Ingest API</h3>
+<span class="badge badge-success">Active Sync</span>
+</div>
+<p class="text-xs text-secondary mb-3">Pulls open engineering postings every 15 minutes from 120 verified tech scaleups.</p>
+<div class="text-xs text-muted mb-3">Last Sync: 8 mins ago • 482 jobs active</div>
+<button class="btn btn-secondary btn-sm w-100" onclick="Toast.success('Sync triggered for Greenhouse.', 'Syncing')">Trigger Sync</button>
+</div>
+<div class="card p-5">
+<div class="d-flex justify-content-between align-items-center mb-3">
+<h3 class="h3 m-0">Lever API Webhook</h3>
+<span class="badge badge-success">Active Sync</span>
+</div>
+<p class="text-xs text-secondary mb-3">Real-time webhook triggers on new job opening publication across enterprise platforms.</p>
+<div class="text-xs text-muted mb-3">Last Sync: 22 mins ago • 210 jobs active</div>
+<button class="btn btn-secondary btn-sm w-100" onclick="Toast.success('Sync triggered for Lever.', 'Syncing')">Trigger Sync</button>
+</div>
+<div class="card p-5">
+<div class="d-flex justify-content-between align-items-center mb-3">
+<h3 class="h3 m-0">Direct Career Web Scraper</h3>
+<span class="badge badge-primary">Scheduled Cron</span>
+</div>
+<p class="text-xs text-secondary mb-3">Scrapes top tier engineering companies (Stripe, Datadog, Scale AI, OpenAI).</p>
+<div class="text-xs text-muted mb-3">Last Sync: 1 hour ago • 150 jobs active</div>
+<button class="btn btn-secondary btn-sm w-100" onclick="Toast.success('Sync triggered for Scraper.', 'Syncing')">Trigger Sync</button>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+
+
+
+
+</body>

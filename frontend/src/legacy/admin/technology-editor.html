@@ -1,0 +1,100 @@
+<body>
+<div class="app-wrapper">
+<!-- ADMIN SIDEBAR -->
+<aside class="sidebar">
+<div class="sidebar-brand">
+<a class="sidebar-logo" href="../index.html">
+<div class="sidebar-logo-badge" style="background: #EF4444;"><i class="bi bi-shield-lock-fill"></i></div>
+<span>Prep<span style="color: #F87171;">Admin</span></span>
+</a>
+</div>
+<div class="sidebar-content">
+<div class="nav-section-title">TECHNOLOGIES</div>
+<ul class="sidebar-nav">
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./technologies.html"><i class="bi bi-arrow-left"></i> <span>Back to Tech List</span></a></li>
+</ul>
+</div>
+</aside>
+<!-- MAIN VIEWPORT -->
+<div class="main-wrapper">
+<header class="topbar">
+<div class="topbar-left">
+<div class="breadcrumb">
+<a href="./technologies.html">Technologies</a>
+<span class="breadcrumb-separator">/</span>
+<span style="color: var(--color-text-primary); font-weight: 600;">Technology Editor</span>
+</div>
+</div>
+<div class="topbar-right">
+<button class="btn btn-primary btn-sm" onclick="saveTechnology()">
+<i class="bi bi-floppy"></i> Save Technology
+        </button>
+</div>
+</header>
+<main class="page-container" style="max-width: 860px;">
+<div class="page-header">
+<div>
+<h1>Create / Edit Technology Stack</h1>
+<p>Configure technology metadata, icon, difficulty level, and parent category taxonomy.</p>
+</div>
+</div>
+<div class="card p-6">
+<form id="tech-form" onsubmit="event.preventDefault(); saveTechnology();">
+<div class="grid-2">
+<div class="form-group">
+<label class="form-label">Technology Name <span class="required">*</span></label>
+<input class="form-control" id="tech-name" placeholder="e.g. Python" required="" type="text"/>
+</div>
+<div class="form-group">
+<label class="form-label">Parent Category</label>
+<select class="form-select" id="tech-cat">
+<option value="cat-1">Backend Development</option>
+<option value="cat-2">Frontend Development</option>
+<option value="cat-3">System Design &amp; Architecture</option>
+<option value="cat-4">DevOps &amp; Cloud</option>
+</select>
+</div>
+</div>
+<div class="form-group">
+<label class="form-label">Slug</label>
+<input class="form-control" id="tech-slug" placeholder="e.g. python" type="text"/>
+</div>
+<div class="form-group">
+<label class="form-label">Description</label>
+<textarea class="form-control" id="tech-desc" placeholder="Summary of curriculum covered..." rows="3"></textarea>
+</div>
+<div class="grid-3">
+<div class="form-group">
+<label class="form-label">Difficulty Level</label>
+<select class="form-select" id="tech-level">
+<option>All Levels</option>
+<option>Beginner</option>
+<option>Intermediate</option>
+<option>Advanced</option>
+</select>
+</div>
+<div class="form-group">
+<label class="form-label">Icon Class</label>
+<input class="form-control" id="tech-icon" type="text" value="bi-filetype-py"/>
+</div>
+<div class="form-group">
+<label class="form-label">Order</label>
+<input class="form-control" id="tech-order" type="number" value="1"/>
+</div>
+</div>
+<div class="d-flex justify-content-end gap-2 pt-4" style="border-top: 1px solid var(--color-divider);">
+<a class="btn btn-secondary btn-sm" href="./technologies.html">Cancel</a>
+<button class="btn btn-primary btn-sm" type="submit"><i class="bi bi-floppy"></i> Save Technology</button>
+</div>
+</form>
+</div>
+</main>
+</div>
+</div>
+
+
+
+
+
+
+</body>

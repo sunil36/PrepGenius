@@ -1,0 +1,222 @@
+<body>
+<div class="app-wrapper">
+<!-- ADMIN SIDEBAR -->
+<aside class="sidebar">
+<div class="sidebar-brand">
+<a class="sidebar-logo" href="../index.html">
+<div class="sidebar-logo-badge" style="background: #EF4444;"><i class="bi bi-shield-lock-fill"></i></div>
+<span>Prep<span style="color: #F87171;">Admin</span></span>
+</a>
+</div>
+<div class="sidebar-content">
+<div class="nav-section-title">CONTENT CMS</div>
+<ul class="sidebar-nav">
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./content.html"><i class="bi bi-arrow-left"></i> <span>Back to Library</span></a></li>
+</ul>
+</div>
+</aside>
+<!-- MAIN VIEWPORT -->
+<div class="main-wrapper">
+<header class="topbar">
+<div class="topbar-left">
+<div class="breadcrumb">
+<a href="./content.html">Content</a>
+<span class="breadcrumb-separator">/</span>
+<span style="color: var(--color-text-primary); font-weight: 600;">Method Resolution Order (MRO) Guide</span>
+</div>
+</div>
+<div class="topbar-right">
+<button class="btn-icon theme-toggle-btn mr-2" title="Toggle Light/Dark Mode">
+<i class="bi bi-moon-stars"></i>
+</button>
+<div class="d-flex align-items-center gap-2 mr-2">
+<button class="btn btn-secondary btn-sm active" id="btn-mode-edit" onclick="toggleEditorMode('edit')">
+<i class="bi bi-pencil"></i> Edit Mode
+          </button>
+<button class="btn btn-secondary btn-sm" id="btn-mode-preview" onclick="toggleEditorMode('preview')">
+<i class="bi bi-eye"></i> User Preview
+          </button>
+<button class="btn btn-secondary btn-sm" id="btn-mode-diff" onclick="toggleEditorMode('diff')">
+<i class="bi bi-file-earmark-diff"></i> Version Diff
+          </button>
+</div>
+<button class="btn btn-outline btn-sm mr-1" onclick="openAIAssistantModal()">
+<i class="bi bi-stars"></i> AI Content Copilot
+        </button>
+<button class="btn btn-primary btn-sm" onclick="publishContent()">
+<i class="bi bi-cloud-upload"></i> Publish to Candidates
+        </button>
+</div>
+</header>
+<main class="page-container" style="max-width: 1140px;">
+<!-- EDIT MODE CONTAINER -->
+<div id="editor-edit-container">
+<!-- Metadata Header -->
+<div class="card p-5 mb-4">
+<div class="grid-3">
+<div class="form-group mb-0">
+<label class="form-label">Parent Topic</label>
+<select class="form-select">
+<option selected="">Python: Object Oriented Programming</option>
+<option>Python: AsyncIO &amp; Concurrency</option>
+</select>
+</div>
+<div class="form-group mb-0">
+<label class="form-label">Content Type</label>
+<select class="form-select">
+<option selected="">Note &amp; Deep Dive Guide</option>
+<option>Scenario Question</option>
+<option>Interview Conceptual Guide</option>
+</select>
+</div>
+<div class="form-group mb-0">
+<label class="form-label">Estimated Read Time</label>
+<input class="form-control" type="text" value="8 min read"/>
+</div>
+</div>
+</div>
+<!-- Rich Content Editor Card -->
+<div class="card p-5 mb-4">
+<div class="form-group">
+<label class="form-label">Article / Guide Title <span class="required">*</span></label>
+<input class="form-control" id="cnt-title" style="font-size: 18px; font-weight: 700;" type="text" value="Deep Dive: Method Resolution Order (MRO) and C3 Linearization"/>
+</div>
+<!-- Rich Text Formatting Toolbar -->
+<div class="rich-toolbar">
+<button class="rich-tool-btn" onclick="document.execCommand('bold')" title="Bold"><i class="bi bi-type-bold"></i></button>
+<button class="rich-tool-btn" onclick="document.execCommand('italic')" title="Italic"><i class="bi bi-type-italic"></i></button>
+<button class="rich-tool-btn" onclick="document.execCommand('underline')" title="Underline"><i class="bi bi-type-underline"></i></button>
+<span style="color: var(--color-border); margin: 0 4px;">|</span>
+<button class="rich-tool-btn" onclick="document.execCommand('formatBlock', false, 'h3')" title="Heading"><i class="bi bi-type-h3"></i></button>
+<button class="rich-tool-btn" onclick="document.execCommand('insertUnorderedList')" title="Bullet List"><i class="bi bi-list-ul"></i></button>
+<button class="rich-tool-btn" onclick="document.execCommand('insertOrderedList')" title="Numbered List"><i class="bi bi-list-ol"></i></button>
+<span style="color: var(--color-border); margin: 0 4px;">|</span>
+<button class="rich-tool-btn" onclick="insertCallout()" title="Insert Callout"><i class="bi bi-info-circle"></i></button>
+</div>
+<!-- Rich Text Area -->
+<div class="rich-editor-area" contenteditable="true" id="cnt-editor-body">
+<h3>What is MRO in Python?</h3>
+<p>In Python, Method Resolution Order (MRO) defines the exact sequence in which base classes are searched when looking for an attribute or method on an instance. Since Python 2.3, the <strong>C3 Linearization Algorithm</strong> is used to resolve ambiguous multiple inheritance diamond problems.</p>
+<div class="callout callout-info">
+<strong>Rule of C3:</strong> A class always precedes its parents, and the original order of base classes is strictly preserved without cyclic dependencies.
+            </div>
+<h4>Key Senior Interview Pitfalls</h4>
+<p>Candidates often assume <code>super()</code> simply calls the immediate parent class. In multiple inheritance, <code>super()</code> delegates to the <em>next class in the MRO graph</em>, not necessarily the parent!</p>
+</div>
+</div>
+<!-- Code Block Attachment Area -->
+<div class="card p-5 mb-4">
+<div class="d-flex justify-content-between align-items-center mb-3">
+<h3 class="h3 m-0"><i class="bi bi-code-slash text-primary"></i> Embedded Code Example</h3>
+<span class="badge badge-neutral">Language: Python</span>
+</div>
+<div class="code-editor-box">
+<div class="code-editor-header">
+<span>mro_example.py</span>
+<span>Python 3</span>
+</div>
+<textarea class="code-editor-textarea" id="cnt-code">class A:
+    def greet(self):
+        return "Hello from A"
+
+class B(A):
+    def greet(self):
+        return "Hello from B -&gt; " + super().greet()
+
+class C(A):
+    def greet(self):
+        return "Hello from C -&gt; " + super().greet()
+
+class D(B, C):
+    pass
+
+# Inspection:
+print(D.mro())
+# Output: [D, B, C, A, object]
+d = D()
+print(d.greet()) # "Hello from B -&gt; Hello from C -&gt; Hello from A"</textarea>
+</div>
+</div>
+</div>
+<!-- PREVIEW MODE CONTAINER -->
+<div class="d-none" id="editor-preview-container">
+<div class="card p-6 mb-6">
+<div class="badge badge-primary mb-2">User Live Preview</div>
+<h1 id="preview-title" style="font-size: 28px; font-weight: 800; margin-bottom: 12px;"></h1>
+<div class="mb-4" id="preview-body"></div>
+<div class="code-editor-box">
+<div class="code-editor-header"><span>Code Snippet</span></div>
+<pre style="margin: 0; border: none; border-radius: 0;"><code id="preview-code"></code></pre>
+</div>
+</div>
+</div>
+<!-- SIDE-BY-SIDE VERSION DIFF CONTAINER -->
+<div class="d-none" id="editor-diff-container">
+<div class="card p-6 mb-6">
+<div class="d-flex justify-content-between align-items-center mb-3">
+<div>
+<h2 style="font-size: 18px; font-weight: 700; margin: 0;">Side-by-Side Version Comparison (v1.8 vs v2.1 Current)</h2>
+<div class="text-xs text-muted">Author: Alexander Wright • Sept 8, 2026</div>
+</div>
+<span class="badge badge-success">+14 Lines Added • -4 Lines Removed</span>
+</div>
+<div class="diff-container">
+<!-- Left: Previous Version -->
+<div class="diff-panel">
+<div class="fw-bold mb-2 pb-1" style="border-bottom: 1px solid var(--color-border);">Version 1.8 (Previous)</div>
+<div>### What is MRO in Python?</div>
+<div>In Python, MRO defines the search order for methods in inheritance.</div>
+<div class="diff-del">- Python uses Depth First Search algorithm for base classes.</div>
+<div class="diff-del">- super() calls the immediate parent class.</div>
+<div>class D(B, C): pass</div>
+</div>
+<!-- Right: New Draft (Current) -->
+<div class="diff-panel">
+<div class="fw-bold mb-2 pb-1" style="border-bottom: 1px solid var(--color-border); color: var(--color-success);">Version 2.1 (Current Draft)</div>
+<div>### What is MRO in Python?</div>
+<div>In Python, Method Resolution Order (MRO) defines the exact sequence in which base classes are searched.</div>
+<div class="diff-add">+ Since Python 2.3, the C3 Linearization Algorithm is used to resolve diamond ambiguity.</div>
+<div class="diff-add">+ super() delegates to the next class in the MRO graph, not necessarily the parent!</div>
+<div>class D(B, C): pass</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+<!-- AI CONTENT GENERATOR MODAL -->
+<div class="modal-backdrop-custom" id="ai-generator-modal">
+<div class="modal-dialog-custom modal-dialog-lg">
+<div class="modal-header-custom">
+<h3 style="font-size: 16px; font-weight: 700; color: var(--color-primary); display: flex; align-items: center; gap: 8px;">
+<i class="bi bi-stars"></i> AI Technical Content Copilot
+      </h3>
+<button class="btn-ghost" onclick="UIComponents.closeModal('ai-generator-modal')" style="padding: 2px 6px;">
+<i class="bi bi-x-lg"></i>
+</button>
+</div>
+<div class="modal-body-custom">
+<div class="form-group">
+<label class="form-label">What technical curriculum topic or scenario question do you want to generate?</label>
+<input class="form-control" id="ai-prompt-input" placeholder="e.g. FastAPI Dependency Injection with async database sessions and Senior Interview Tips" type="text"/>
+</div>
+<div class="callout callout-info text-xs mb-0">
+        AI will automatically generate the title, structured multi-section explanation, working code snippet, and common interview pitfalls.
+      </div>
+</div>
+<div class="modal-footer-custom">
+<button class="btn btn-secondary btn-sm" onclick="UIComponents.closeModal('ai-generator-modal')">Cancel</button>
+<button class="btn btn-primary btn-sm" onclick="generateContentViaAI()">
+<i class="bi bi-magic"></i> Generate &amp; Populate Editor
+      </button>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+</body>

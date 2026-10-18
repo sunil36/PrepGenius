@@ -1,0 +1,297 @@
+<body>
+<div class="app-wrapper">
+<!-- USER SIDEBAR -->
+<aside class="sidebar">
+<div class="sidebar-brand">
+<a class="sidebar-logo" href="../index.html">
+<div class="sidebar-logo-badge"><i class="bi bi-compass"></i></div>
+<span>Prep<span style="color: #38BDF8;">Pilot</span></span>
+</a>
+<span class="badge badge-primary" style="font-size: 10px;">User</span>
+</div>
+<div class="sidebar-content">
+<div class="nav-section-title">HOME</div>
+<ul class="sidebar-nav">
+<li class="sidebar-nav-item">
+<a class="sidebar-nav-link active" href="./dashboard.html">
+<i class="bi bi-grid-1x2"></i> <span>Dashboard</span>
+</a>
+</li>
+</ul>
+<div class="nav-section-title">LEARN</div>
+<ul class="sidebar-nav">
+<li class="sidebar-nav-item">
+<a class="sidebar-nav-link" href="./learn.html">
+<i class="bi bi-book"></i> <span>Learning Paths</span>
+</a>
+</li>
+<li class="sidebar-nav-item">
+<a class="sidebar-nav-link" href="./topic.html">
+<i class="bi bi-file-earmark-code"></i> <span>Topic Deep-Dive</span>
+</a>
+</li>
+</ul>
+<div class="nav-section-title">PRACTICE</div>
+<ul class="sidebar-nav">
+<li class="sidebar-nav-item">
+<a class="sidebar-nav-link" href="./practice.html">
+<i class="bi bi-lightning"></i> <span>Questions &amp; MCQs</span>
+<span class="sidebar-badge">24</span>
+</a>
+</li>
+<li class="sidebar-nav-item">
+<a class="sidebar-nav-link" href="./interview.html">
+<i class="bi bi-camera-video"></i> <span>Mock Interview</span>
+</a>
+</li>
+</ul>
+<div class="nav-section-title">CAREER &amp; AUTOMATION</div>
+<ul class="sidebar-nav">
+<li class="sidebar-nav-item">
+<a class="sidebar-nav-link" href="./resume.html">
+<i class="bi bi-file-earmark-person"></i> <span>Resumes &amp; ATS</span>
+</a>
+</li>
+<li class="sidebar-nav-item">
+<a class="sidebar-nav-link" href="./jobs.html">
+<i class="bi bi-briefcase"></i> <span>Find Jobs</span>
+</a>
+</li>
+<li class="sidebar-nav-item">
+<a class="sidebar-nav-link" href="./automation.html">
+<i class="bi bi-robot"></i> <span>Auto-Apply Rules</span>
+</a>
+</li>
+<li class="sidebar-nav-item">
+<a class="sidebar-nav-link" href="./application-review.html">
+<i class="bi bi-shield-check"></i> <span>Approval Queue</span>
+<span class="sidebar-badge" style="background-color: var(--color-warning); color: #000;">2</span>
+</a>
+</li>
+<li class="sidebar-nav-item">
+<a class="sidebar-nav-link" href="./applications.html">
+<i class="bi bi-kanban"></i> <span>Applications Tracker</span>
+</a>
+</li>
+</ul>
+<div class="nav-section-title">ACCOUNT</div>
+<ul class="sidebar-nav">
+<li class="sidebar-nav-item">
+<a class="sidebar-nav-link" href="./profile.html">
+<i class="bi bi-person"></i> <span>My Profile</span>
+</a>
+</li>
+<li class="sidebar-nav-item">
+<a class="sidebar-nav-link" href="./notifications.html">
+<i class="bi bi-bell"></i> <span>Notifications</span>
+</a>
+</li>
+<li class="sidebar-nav-item">
+<a class="sidebar-nav-link" href="./settings.html">
+<i class="bi bi-gear"></i> <span>Settings</span>
+</a>
+</li>
+</ul>
+</div>
+<div class="sidebar-footer">
+<a class="btn btn-outline w-100 btn-sm mb-2" href="../admin/dashboard.html" style="border-color: #334155; color: #94A3B8; font-size: 11px;">
+<i class="bi bi-arrow-repeat"></i> Switch to Admin App
+      </a>
+<div class="user-profile-widget">
+<div class="user-avatar">AJ</div>
+<div style="flex: 1; min-width: 0;">
+<div style="font-size: 13px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Alex Johnson</div>
+<div style="font-size: 11px; color: #64748B;">Candidate (Senior Dev)</div>
+</div>
+</div>
+</div>
+</aside>
+<!-- MAIN VIEWPORT -->
+<div class="main-wrapper">
+<!-- TOPBAR -->
+<header class="topbar">
+<div class="topbar-left">
+<button class="btn btn-ghost d-lg-none p-1" id="mobile-sidebar-toggle">
+<i class="bi bi-list" style="font-size: 20px;"></i>
+</button>
+<div class="global-search-trigger">
+<i class="bi bi-search"></i>
+<span>Search anything...</span>
+<span class="search-shortcut">Ctrl+K</span>
+</div>
+</div>
+<div class="topbar-right">
+<a class="btn-icon" href="./notifications.html" title="Notifications">
+<i class="bi bi-bell"></i>
+</a>
+<a class="btn-icon" href="./profile.html" title="Profile">
+<i class="bi bi-person-circle"></i>
+</a>
+</div>
+</header>
+<!-- PAGE CONTAINER -->
+<main class="page-container">
+<!-- Welcome Header -->
+<div class="page-header">
+<div>
+<h1 style="font-size: 26px; font-weight: 700; margin-bottom: 4px;">Good evening, Alex 👋</h1>
+<p style="margin: 0; font-size: 14px; color: var(--color-text-secondary);">
+            You have <strong class="text-primary">2 applications awaiting review</strong> and your Python mastery is at <strong class="text-success">82%</strong>.
+          </p>
+</div>
+<div class="page-header-actions">
+<a class="btn btn-secondary btn-sm" href="./interview.html">
+<i class="bi bi-camera-video"></i> Start Mock Interview
+          </a>
+<a class="btn btn-primary btn-sm" href="./application-review.html">
+<i class="bi bi-shield-check"></i> Review Auto-Applications
+          </a>
+</div>
+</div>
+<!-- Quick Metrics Grid -->
+<div class="grid-4 mb-6">
+<div class="stat-card">
+<div class="stat-header">
+<span class="stat-title">Overall Prep Progress</span>
+<div class="stat-icon" style="background: var(--color-primary-light); color: var(--color-primary);">
+<i class="bi bi-pie-chart"></i>
+</div>
+</div>
+<div class="stat-value">68%</div>
+<div class="progress mt-2">
+<div class="progress-bar" style="width: 68%;"></div>
+</div>
+</div>
+<div class="stat-card">
+<div class="stat-header">
+<span class="stat-title">Questions Mastered</span>
+<div class="stat-icon" style="background: var(--color-success-light); color: var(--color-success);">
+<i class="bi bi-check-circle"></i>
+</div>
+</div>
+<div class="stat-value">148 <span style="font-size: 14px; color: var(--color-text-muted); font-weight: 400;">/ 210</span></div>
+<div class="stat-trend text-success"><i class="bi bi-arrow-up"></i> +12 this week</div>
+</div>
+<div class="stat-card">
+<div class="stat-header">
+<span class="stat-title">Default Resume ATS Score</span>
+<div class="stat-icon" style="background: #FEF3C7; color: #D97706;">
+<i class="bi bi-file-earmark-check"></i>
+</div>
+</div>
+<div class="stat-value">92%</div>
+<div class="stat-trend text-success"><i class="bi bi-check2"></i> Top 5% Match Tier</div>
+</div>
+<div class="stat-card">
+<div class="stat-header">
+<span class="stat-title">Active Applications</span>
+<div class="stat-icon" style="background: #F0F9FF; color: #0284C7;">
+<i class="bi bi-send-check"></i>
+</div>
+</div>
+<div class="stat-value">4</div>
+<div class="stat-trend text-primary"><i class="bi bi-calendar-event"></i> 1 Interview Scheduled</div>
+</div>
+</div>
+<div class="grid-2 mb-6">
+<!-- Continue Learning Module -->
+<div class="card">
+<div class="card-header">
+<h3 style="font-size: 16px; margin: 0;"><i class="bi bi-play-circle text-primary"></i> Continue Learning</h3>
+<a class="text-sm fw-semibold" href="./learn.html">View All Paths →</a>
+</div>
+<div class="card-body">
+<div class="d-flex align-items-center justify-content-between p-3 rounded mb-3" style="background: var(--color-background-subtle); border: 1px solid var(--color-border);">
+<div>
+<span class="badge badge-primary mb-1">Python</span>
+<div class="fw-semibold text-primary" style="font-size: 15px;">Object Oriented Programming</div>
+<div class="text-xs text-muted">Last accessed: Method Resolution Order (MRO) • 82% complete</div>
+</div>
+<a class="btn btn-primary btn-sm" href="./topic.html">Continue <i class="bi bi-arrow-right"></i></a>
+</div>
+<div class="d-flex align-items-center justify-content-between p-3 rounded" style="background: var(--color-background-subtle); border: 1px solid var(--color-border);">
+<div>
+<span class="badge badge-neutral mb-1">PostgreSQL</span>
+<div class="fw-semibold" style="font-size: 15px;">Query Optimization &amp; Indexing</div>
+<div class="text-xs text-muted">Next up: EXPLAIN ANALYZE Execution Plans • 64% complete</div>
+</div>
+<a class="btn btn-secondary btn-sm" href="./topic.html">Resume <i class="bi bi-arrow-right"></i></a>
+</div>
+</div>
+</div>
+<!-- Practice Performance & Weak Areas -->
+<div class="card">
+<div class="card-header">
+<h3 style="font-size: 16px; margin: 0;"><i class="bi bi-graph-up-arrow text-success"></i> Skill Mastery Radar</h3>
+<a class="text-sm fw-semibold" href="./practice.html">Practice Weak Areas →</a>
+</div>
+<div class="card-body">
+<div class="mb-3">
+<div class="d-flex justify-content-between text-sm mb-1">
+<span>Core Python &amp; Concurrency</span>
+<span class="fw-semibold text-success">82%</span>
+</div>
+<div class="progress"><div class="progress-bar progress-bar-success" style="width: 82%;"></div></div>
+</div>
+<div class="mb-3">
+<div class="d-flex justify-content-between text-sm mb-1">
+<span>PostgreSQL &amp; Relational Design</span>
+<span class="fw-semibold">64%</span>
+</div>
+<div class="progress"><div class="progress-bar" style="width: 64%;"></div></div>
+</div>
+<div class="mb-3">
+<div class="d-flex justify-content-between text-sm mb-1">
+<span>FastAPI / Django REST API</span>
+<span class="fw-semibold text-warning">48%</span>
+</div>
+<div class="progress"><div class="progress-bar progress-bar-warning" style="width: 48%;"></div></div>
+</div>
+<div>
+<div class="d-flex justify-content-between text-sm mb-1">
+<span>Distributed System Design</span>
+<span class="fw-semibold text-danger">31% (Target for practice)</span>
+</div>
+<div class="progress"><div class="progress-bar progress-bar-danger" style="width: 31%;"></div></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Recommended Jobs Section -->
+<div class="card mb-6">
+<div class="card-header">
+<div>
+<h3 style="font-size: 16px; margin: 0;">Top Matching High-Yield Roles</h3>
+<div class="text-xs text-muted">Automatically evaluated against your Senior Python Engineer resume</div>
+</div>
+<a class="btn btn-secondary btn-sm" href="./jobs.html">Explore All Jobs</a>
+</div>
+<div class="card-body p-0">
+<div class="table-container" style="border: none; box-shadow: none;">
+<table class="table">
+<thead>
+<tr>
+<th>Job Title &amp; Company</th>
+<th>Location</th>
+<th>Salary Range</th>
+<th>ATS Match</th>
+<th>Actions</th>
+</tr>
+</thead>
+<tbody id="dashboard-jobs-table">
+<!-- Dynamically populated from API -->
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+
+
+
+
+
+</body>

@@ -1,0 +1,136 @@
+<body>
+<div class="app-wrapper">
+<!-- USER SIDEBAR -->
+<aside class="sidebar">
+<div class="sidebar-brand">
+<a class="sidebar-logo" href="../index.html">
+<div class="sidebar-logo-badge"><i class="bi bi-compass"></i></div>
+<span>Prep<span style="color: #38BDF8;">Pilot</span></span>
+</a>
+<span class="badge badge-primary" style="font-size: 10px;">User</span>
+</div>
+<div class="sidebar-content">
+<div class="nav-section-title">PRACTICE SUITE</div>
+<ul class="sidebar-nav">
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./dashboard.html"><i class="bi bi-grid-1x2"></i> <span>Dashboard</span></a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./practice.html"><i class="bi bi-lightning"></i> <span>Practice &amp; Code</span></a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link active" href="./system-design.html"><i class="bi bi-diagram-3"></i> <span>System Design Canvas</span></a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./flashcards.html"><i class="bi bi-card-checklist"></i> <span>Spaced Flashcards (SRS)</span></a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./interview.html"><i class="bi bi-camera-video"></i> <span>Mock Interview</span></a></li>
+</ul>
+</div>
+</aside>
+<!-- MAIN VIEWPORT -->
+<div class="main-wrapper">
+<header class="topbar">
+<div class="topbar-left">
+<div class="breadcrumb">
+<a href="./practice.html">Practice</a>
+<span class="breadcrumb-separator">/</span>
+<span style="color: var(--color-text-primary); font-weight: 600;">System Design: High-Throughput URL Shortener (Bitly Scale)</span>
+</div>
+</div>
+<div class="topbar-right">
+<button class="btn-icon theme-toggle-btn" title="Toggle Light/Dark Mode">
+<i class="bi bi-moon-stars"></i>
+</button>
+<button class="btn btn-secondary btn-sm" onclick="resetCanvas()">
+<i class="bi bi-arrow-counterclockwise"></i> Reset
+        </button>
+<button class="btn btn-primary btn-sm" onclick="evaluateArchitecture()">
+<i class="bi bi-shield-check"></i> Evaluate Architecture
+        </button>
+</div>
+</header>
+<main class="page-container" style="max-width: 1440px;">
+<!-- Challenge Prompt Bar -->
+<div class="card p-4 mb-4">
+<div class="d-flex justify-content-between align-items-center">
+<div>
+<span class="badge badge-primary mb-1">Architecture Challenge</span>
+<h2 style="font-size: 16px; font-weight: 700; margin: 0;">Design a Scalable Distributed URL Shortener handling 100M daily writes &amp; 1B daily reads</h2>
+</div>
+<div class="d-flex gap-2">
+<button class="btn btn-secondary btn-sm" onclick="Toast.info('Target: Under 10ms read latency using Redis caching &amp; Base62 encoding.', 'Target SLAs')">
+<i class="bi bi-bullseye"></i> View SLAs
+            </button>
+</div>
+</div>
+</div>
+<!-- Component Palette & Whiteboard Grid -->
+<div class="grid-4 mb-4" style="grid-template-columns: 220px 1fr;">
+<!-- Left Palette -->
+<div class="card p-4 d-flex flex-column gap-2" style="height: fit-content;">
+<div class="text-xs text-muted fw-bold mb-2">SYSTEM COMPONENTS</div>
+<button class="btn btn-secondary btn-sm w-100 text-left" onclick="addNode('Client Apps (Web/Mobile)', 'bi-phone', 40, 40)">
+<i class="bi bi-phone text-primary"></i> + Client Apps
+          </button>
+<button class="btn btn-secondary btn-sm w-100 text-left" onclick="addNode('Nginx / AWS ALB', 'bi-arrow-left-right', 240, 40)">
+<i class="bi bi-arrow-left-right text-info"></i> + Load Balancer
+          </button>
+<button class="btn btn-secondary btn-sm w-100 text-left" onclick="addNode('FastAPI Microservices', 'bi-boxes', 440, 40)">
+<i class="bi bi-boxes text-success"></i> + Web Service
+          </button>
+<button class="btn btn-secondary btn-sm w-100 text-left" onclick="addNode('Redis Caching Layer', 'bi-lightning', 440, 160)">
+<i class="bi bi-lightning text-warning"></i> + Redis Cache
+          </button>
+<button class="btn btn-secondary btn-sm w-100 text-left" onclick="addNode('PostgreSQL Primary', 'bi-database', 680, 40)">
+<i class="bi bi-database text-primary"></i> + PostgreSQL DB
+          </button>
+<button class="btn btn-secondary btn-sm w-100 text-left" onclick="addNode('Apache Kafka Stream', 'bi-activity', 680, 160)">
+<i class="bi bi-activity text-danger"></i> + Kafka Queue
+          </button>
+</div>
+<!-- Canvas Area -->
+<div>
+<div class="canvas-container" id="system-canvas">
+<!-- Initial Seed Nodes -->
+<div class="system-node" onmousedown="dragNode(this, event)" style="left: 40px; top: 120px;">
+<i class="bi bi-phone text-primary"></i> Client (Web / iOS)
+            </div>
+<div class="system-node" onmousedown="dragNode(this, event)" style="left: 260px; top: 120px;">
+<i class="bi bi-arrow-left-right text-info"></i> Nginx Load Balancer
+            </div>
+<div class="system-node" onmousedown="dragNode(this, event)" style="left: 480px; top: 70px;">
+<i class="bi bi-boxes text-success"></i> Core URL Microservices
+            </div>
+<div class="system-node" onmousedown="dragNode(this, event)" style="left: 480px; top: 220px;">
+<i class="bi bi-lightning text-warning"></i> Redis Cluster (LRU Cache)
+            </div>
+<div class="system-node" onmousedown="dragNode(this, event)" style="left: 720px; top: 120px;">
+<i class="bi bi-database text-primary"></i> Sharded PostgreSQL
+            </div>
+</div>
+</div>
+</div>
+<!-- AI Architecture Diagnostics Panel -->
+<div class="card p-6 d-none" id="arch-evaluation-panel">
+<h3 class="h3 mb-3 text-success"><i class="bi bi-check-circle-fill"></i> AI System Design Evaluation Report</h3>
+<div class="grid-3 mb-4">
+<div class="p-3 rounded" style="background: var(--color-background-subtle);">
+<div class="text-xs text-muted">HIGH AVAILABILITY</div>
+<strong class="text-success" style="font-size: 18px;">96% (Resilient)</strong>
+<div class="text-xs text-secondary mt-1">Load balancer distributes across multiple stateless containers.</div>
+</div>
+<div class="p-3 rounded" style="background: var(--color-background-subtle);">
+<div class="text-xs text-muted">READ LATENCY SLA</div>
+<strong class="text-success" style="font-size: 18px;">&lt; 6ms p99</strong>
+<div class="text-xs text-secondary mt-1">Redis LRU cache intercepts 85% of repeated hot URL redirections.</div>
+</div>
+<div class="p-3 rounded" style="background: var(--color-background-subtle);">
+<div class="text-xs text-muted">DATA PARTITIONING</div>
+<strong class="text-primary" style="font-size: 18px;">Hash-Based Shard</strong>
+<div class="text-xs text-secondary mt-1">Key Range partitioning prevents single-node IOPS saturation.</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+
+
+
+
+
+</body>

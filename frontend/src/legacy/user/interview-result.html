@@ -1,0 +1,97 @@
+<body>
+<div class="app-wrapper">
+<!-- USER SIDEBAR -->
+<aside class="sidebar">
+<div class="sidebar-brand">
+<a class="sidebar-logo" href="../index.html">
+<div class="sidebar-logo-badge"><i class="bi bi-compass"></i></div>
+<span>Prep<span style="color: #38BDF8;">Pilot</span></span>
+</a>
+</div>
+<div class="sidebar-content">
+<div class="nav-section-title">INTERVIEW RESULTS</div>
+<ul class="sidebar-nav">
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./dashboard.html"><i class="bi bi-grid-1x2"></i> <span>Dashboard</span></a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./learn.html"><i class="bi bi-book"></i> <span>Learn Weak Topics</span></a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./interview.html"><i class="bi bi-arrow-repeat"></i> <span>Retake Interview</span></a></li>
+</ul>
+</div>
+</aside>
+<!-- MAIN VIEWPORT -->
+<div class="main-wrapper">
+<header class="topbar">
+<div class="topbar-left">
+<div class="breadcrumb">
+<a href="./dashboard.html">Home</a>
+<span class="breadcrumb-separator">/</span>
+<span style="color: var(--color-text-primary); font-weight: 500;">AI Mock Interview Performance Scorecard</span>
+</div>
+</div>
+<div class="topbar-right">
+<button class="btn btn-secondary btn-sm" onclick="Toast.success('Evaluation scorecard PDF generated.', 'Exported')">
+<i class="bi bi-download"></i> Export Evaluation PDF
+        </button>
+</div>
+</header>
+<main class="page-container" style="max-width: 1040px;">
+<!-- Top Score Hero -->
+<div class="card p-6 mb-6 text-center" style="background: radial-gradient(circle at 50% 0%, #EEF2FF 0%, #FFFFFF 100%);">
+<span class="badge badge-success mb-2" style="font-size: 13px; padding: 4px 12px;">Top Tier Candidate Performance</span>
+<h1 style="font-size: 32px; font-weight: 800; margin-bottom: 8px;">Overall Performance Score: 88 / 100</h1>
+<p style="font-size: 15px; color: var(--color-text-secondary); max-width: 600px; margin: 0 auto;">
+          Strong architectural articulation of distributed transaction primitives, Saga orchestrators, and Python memory internals.
+        </p>
+</div>
+<!-- 4 Key Dimensions Grid -->
+<div class="grid-4 mb-6">
+<div class="stat-card">
+<span class="stat-title">Technical Accuracy</span>
+<div class="stat-value text-success">92%</div>
+<div class="progress"><div class="progress-bar progress-bar-success" style="width: 92%;"></div></div>
+</div>
+<div class="stat-card">
+<span class="stat-title">System Architecture</span>
+<div class="stat-value text-primary">86%</div>
+<div class="progress"><div class="progress-bar" style="width: 86%;"></div></div>
+</div>
+<div class="stat-card">
+<span class="stat-title">Communication Clarity</span>
+<div class="stat-value text-success">90%</div>
+<div class="progress"><div class="progress-bar progress-bar-success" style="width: 90%;"></div></div>
+</div>
+<div class="stat-card">
+<span class="stat-title">Problem Solving Speed</span>
+<div class="stat-value text-warning">84%</div>
+<div class="progress"><div class="progress-bar progress-bar-warning" style="width: 84%;"></div></div>
+</div>
+</div>
+<!-- Strengths & Weak Areas Grid -->
+<div class="grid-2 mb-6">
+<div class="card p-6">
+<h3 class="h3 mb-3 text-success"><i class="bi bi-check-circle-fill"></i> Strong Areas Demonstrated</h3>
+<ul class="text-sm text-secondary" style="padding-left: 18px; line-height: 1.8;">
+<li>Excellent articulation of C3 Linearization Algorithm and Method Resolution Order.</li>
+<li>Solid grasp of Redis Redlock and double-checked concurrency locking in Python.</li>
+<li>Accurately contrasted synchronous 2PC bottlenecks against asynchronous Saga outbox events.</li>
+</ul>
+</div>
+<div class="card p-6">
+<h3 class="h3 mb-3 text-danger"><i class="bi bi-exclamation-triangle-fill"></i> Target Areas for Improvement</h3>
+<ul class="text-sm text-secondary mb-4" style="padding-left: 18px; line-height: 1.8;">
+<li>Deepen discussion on PostgreSQL logical replication lag during cross-region sharding.</li>
+<li>Mention rate-limiting algorithms (Token Bucket vs Leaky Bucket) for API gateways.</li>
+</ul>
+<a class="btn btn-secondary btn-sm w-100" href="./topic.html">
+<i class="bi bi-book"></i> Review Database Sharding Topic
+          </a>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+
+
+
+
+</body>

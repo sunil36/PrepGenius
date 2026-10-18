@@ -1,0 +1,121 @@
+<body>
+<div class="app-wrapper">
+<!-- USER SIDEBAR -->
+<aside class="sidebar">
+<div class="sidebar-brand">
+<a class="sidebar-logo" href="../index.html">
+<div class="sidebar-logo-badge"><i class="bi bi-compass"></i></div>
+<span>Prep<span style="color: #38BDF8;">Pilot</span></span>
+</a>
+<span class="badge badge-primary" style="font-size: 10px;">User</span>
+</div>
+<div class="sidebar-content">
+<div class="nav-section-title">PRACTICE SUITE</div>
+<ul class="sidebar-nav">
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./dashboard.html"><i class="bi bi-grid-1x2"></i> <span>Dashboard</span></a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./practice.html"><i class="bi bi-lightning"></i> <span>Practice &amp; Code</span></a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./system-design.html"><i class="bi bi-diagram-3"></i> <span>System Design Canvas</span></a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link active" href="./flashcards.html"><i class="bi bi-card-checklist"></i> <span>Spaced Flashcards (SRS)</span></a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./interview.html"><i class="bi bi-camera-video"></i> <span>Mock Interview</span></a></li>
+</ul>
+</div>
+</aside>
+<!-- MAIN VIEWPORT -->
+<div class="main-wrapper">
+<header class="topbar">
+<div class="topbar-left">
+<div class="breadcrumb">
+<a href="./practice.html">Practice</a>
+<span class="breadcrumb-separator">/</span>
+<span style="color: var(--color-text-primary); font-weight: 600;">Spaced Repetition Flashcard Engine</span>
+</div>
+</div>
+<div class="topbar-right">
+<button class="btn-icon theme-toggle-btn" title="Toggle Light/Dark Mode">
+<i class="bi bi-moon-stars"></i>
+</button>
+</div>
+</header>
+<main class="page-container" style="max-width: 860px;">
+<div class="page-header">
+<div>
+<h1>Active Recall &amp; Spaced Repetition (SRS)</h1>
+<p>Retain critical architectural concepts and algorithms using spaced interval scheduling.</p>
+</div>
+</div>
+<!-- Flashcard Deck Progress Bar -->
+<div class="card p-4 mb-6">
+<div class="d-flex justify-content-between text-xs mb-2">
+<span>Card <strong>03 / 24</strong> in "Python Internals &amp; System Design"</span>
+<span class="text-success fw-bold">88% Retention Score</span>
+</div>
+<div class="progress"><div class="progress-bar progress-bar-success" style="width: 72%;"></div></div>
+</div>
+<!-- 3D FLIP CARD -->
+<div class="srs-flip-container mb-6" onclick="toggleCardFlip()">
+<div class="srs-flipper" id="card-flipper">
+<!-- FRONT FACE -->
+<div class="srs-front">
+<div>
+<div class="d-flex justify-content-between align-items-center mb-3">
+<span class="badge badge-primary">Python Internals</span>
+<span class="text-xs text-muted"><i class="bi bi-hand-index"></i> Click card to reveal answer</span>
+</div>
+<h2 style="font-size: 22px; font-weight: 700; line-height: 1.4; color: var(--color-text-primary);">
+                What exact sequence of checks does Python's C3 Linearization perform when resolving multiple inheritance conflicts?
+              </h2>
+</div>
+<div class="text-xs text-muted text-center pt-3" style="border-top: 1px solid var(--color-divider);">
+              Press <kbd>Space</kbd> or Click to flip
+            </div>
+</div>
+<!-- BACK FACE -->
+<div class="srs-back">
+<div>
+<div class="d-flex justify-content-between align-items-center mb-3">
+<span class="badge badge-success"><i class="bi bi-check2"></i> Master Answer Key</span>
+<span class="text-xs text-muted">Topic: OOP &amp; MRO</span>
+</div>
+<div class="mb-3" style="font-size: 14px; line-height: 1.6; color: var(--color-text-primary);">
+<p><strong>3 Core Rules of C3 Linearization:</strong></p>
+<ol style="padding-left: 20px;">
+<li><strong>Subclasses come before parent classes:</strong> A child class always precedes its parents in the resolution list.</li>
+<li><strong>Parent order is strictly preserved:</strong> In <code>class D(B, C)</code>, <code>B</code>'s subtree is evaluated before <code>C</code>'s subtree.</li>
+<li><strong>Monotonicity:</strong> A class must appear in the same relative order across all class hierarchies without cyclic conflicts.</li>
+</ol>
+</div>
+</div>
+<div class="text-xs text-muted text-center pt-2" style="border-top: 1px solid var(--color-divider);">
+              💡 <em>Senior Takeaway:</em> <code>super()</code> delegates to next node in MRO, not parent.
+            </div>
+</div>
+</div>
+</div>
+<!-- SRS INTERVAL RATING BUTTONS -->
+<div class="card p-4">
+<div class="text-xs text-center text-muted fw-semibold mb-3">HOW WELL DID YOU RECALL THIS CONCEPT?</div>
+<div class="grid-4">
+<button class="btn btn-danger-outline btn-sm" onclick="rateCard('Again (&lt; 1m)', 'warning')">
+<i class="bi bi-arrow-repeat"></i> Again (&lt;1m)
+          </button>
+<button class="btn btn-secondary btn-sm" onclick="rateCard('Hard (12h)', 'info')">
+<i class="bi bi-dash-circle"></i> Hard (12h)
+          </button>
+<button class="btn btn-primary btn-sm" onclick="rateCard('Good (1 day)', 'success')">
+<i class="bi bi-check-circle"></i> Good (1d)
+          </button>
+<button class="btn btn-success btn-sm" onclick="rateCard('Easy (4 days)', 'success')">
+<i class="bi bi-stars"></i> Easy (4d)
+          </button>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+
+
+
+
+
+</body>

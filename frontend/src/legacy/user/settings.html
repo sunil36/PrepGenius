@@ -1,0 +1,88 @@
+<body>
+<div class="app-wrapper">
+<!-- USER SIDEBAR -->
+<aside class="sidebar">
+<div class="sidebar-brand">
+<a class="sidebar-logo" href="../index.html">
+<div class="sidebar-logo-badge"><i class="bi bi-compass"></i></div>
+<span>Prep<span style="color: #38BDF8;">Pilot</span></span>
+</a>
+<span class="badge badge-primary" style="font-size: 10px;">User</span>
+</div>
+<div class="sidebar-content">
+<div class="nav-section-title">ACCOUNT</div>
+<ul class="sidebar-nav">
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./dashboard.html"><i class="bi bi-grid-1x2"></i> Dashboard</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./profile.html"><i class="bi bi-person"></i> My Profile</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./notifications.html"><i class="bi bi-bell"></i> Notifications</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link active" href="./settings.html"><i class="bi bi-gear"></i> Settings</a></li>
+</ul>
+</div>
+</aside>
+<!-- MAIN VIEWPORT -->
+<div class="main-wrapper">
+<header class="topbar">
+<div class="topbar-left">
+<div class="breadcrumb">
+<a href="./dashboard.html">Home</a>
+<span class="breadcrumb-separator">/</span>
+<span style="color: var(--color-text-primary); font-weight: 500;">Preferences &amp; Security Settings</span>
+</div>
+</div>
+<div class="topbar-right">
+<button class="btn btn-primary btn-sm" onclick="Toast.success('Preferences saved successfully.', 'Saved')">
+<i class="bi bi-floppy"></i> Save Preferences
+        </button>
+</div>
+</header>
+<main class="page-container" style="max-width: 900px;">
+<div class="page-header">
+<div>
+<h1>Application &amp; Privacy Settings</h1>
+<p>Control email digest preferences, API keys, and auto-apply security rules.</p>
+</div>
+</div>
+<!-- Security & Auto-Apply Guard Settings -->
+<div class="card p-6 mb-6">
+<h3 class="h3 mb-4"><i class="bi bi-shield-check text-primary"></i> Application Safety &amp; Permissions</h3>
+<div class="d-flex justify-content-between align-items-center py-3" style="border-bottom: 1px solid var(--color-divider);">
+<div>
+<div class="fw-semibold text-sm">Strict Approval Queue Requirement</div>
+<div class="text-xs text-muted">Never submit any job application without explicit user click in Approval Queue</div>
+</div>
+<label class="form-switch">
+<input checked="" type="checkbox"/>
+<span class="switch-slider"></span>
+</label>
+</div>
+<div class="d-flex justify-content-between align-items-center py-3" style="border-bottom: 1px solid var(--color-divider);">
+<div>
+<div class="fw-semibold text-sm">Daily Auto-Application Limit</div>
+<div class="text-xs text-muted">Cap maximum automated draft generation to 10/day</div>
+</div>
+<select class="form-select form-select-sm" style="width: 140px;">
+<option>5 / day</option>
+<option selected="">10 / day</option>
+<option>25 / day</option>
+</select>
+</div>
+<div class="d-flex justify-content-between align-items-center py-3">
+<div>
+<div class="fw-semibold text-sm">Email Digest for Interview Invites</div>
+<div class="text-xs text-muted">Instant push notification and email alert when recruiter interview scheduled</div>
+</div>
+<label class="form-switch">
+<input checked="" type="checkbox"/>
+<span class="switch-slider"></span>
+</label>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+
+
+
+
+</body>

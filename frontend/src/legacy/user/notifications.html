@@ -1,0 +1,57 @@
+<body>
+<div class="app-wrapper">
+<!-- USER SIDEBAR -->
+<aside class="sidebar">
+<div class="sidebar-brand">
+<a class="sidebar-logo" href="../index.html">
+<div class="sidebar-logo-badge"><i class="bi bi-compass"></i></div>
+<span>Prep<span style="color: #38BDF8;">Pilot</span></span>
+</a>
+<span class="badge badge-primary" style="font-size: 10px;">User</span>
+</div>
+<div class="sidebar-content">
+<div class="nav-section-title">ACCOUNT</div>
+<ul class="sidebar-nav">
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./dashboard.html"><i class="bi bi-grid-1x2"></i> Dashboard</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./profile.html"><i class="bi bi-person"></i> My Profile</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link active" href="./notifications.html"><i class="bi bi-bell"></i> Notifications</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./settings.html"><i class="bi bi-gear"></i> Settings</a></li>
+</ul>
+</div>
+</aside>
+<!-- MAIN VIEWPORT -->
+<div class="main-wrapper">
+<header class="topbar">
+<div class="topbar-left">
+<div class="breadcrumb">
+<a href="./dashboard.html">Home</a>
+<span class="breadcrumb-separator">/</span>
+<span style="color: var(--color-text-primary); font-weight: 500;">Notification Center</span>
+</div>
+</div>
+<div class="topbar-right">
+<button class="btn btn-secondary btn-sm" onclick="markAllNotificationsRead()">
+<i class="bi bi-check2-all"></i> Mark All as Read
+        </button>
+</div>
+</header>
+<main class="page-container" style="max-width: 900px;">
+<div class="page-header">
+<div>
+<h1>Activity &amp; System Notifications</h1>
+<p>Real-time updates regarding new job matches, auto-applications, and interview schedules.</p>
+</div>
+</div>
+<div class="d-flex flex-column gap-3" id="notifications-list">
+<!-- Rendered via API -->
+</div>
+</main>
+</div>
+</div>
+
+
+
+
+
+
+</body>

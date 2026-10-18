@@ -1,0 +1,75 @@
+<body>
+<div class="app-wrapper">
+<!-- ADMIN SIDEBAR -->
+<aside class="sidebar">
+<div class="sidebar-brand">
+<a class="sidebar-logo" href="../index.html">
+<div class="sidebar-logo-badge" style="background: #EF4444;"><i class="bi bi-shield-lock-fill"></i></div>
+<span>Prep<span style="color: #F87171;">Admin</span></span>
+</a>
+<span class="badge badge-danger" style="font-size: 10px;">CMS</span>
+</div>
+<div class="sidebar-content">
+<div class="nav-section-title">CAREER INGESTION</div>
+<ul class="sidebar-nav">
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./dashboard.html"><i class="bi bi-speedometer2"></i> Dashboard</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./jobs.html"><i class="bi bi-briefcase"></i> Job Feeds</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./applications.html"><i class="bi bi-send"></i> Applications</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link active" href="./automation.html"><i class="bi bi-robot"></i> Automation Monitor</a></li>
+</ul>
+</div>
+</aside>
+<!-- MAIN VIEWPORT -->
+<div class="main-wrapper">
+<header class="topbar">
+<div class="topbar-left">
+<div class="breadcrumb">
+<a href="./dashboard.html">CMS</a>
+<span class="breadcrumb-separator">/</span>
+<span style="color: var(--color-text-primary); font-weight: 600;">Automation Engine Monitor</span>
+</div>
+</div>
+<div class="topbar-right">
+<button class="btn btn-secondary btn-sm" onclick="Toast.info('Worker threads healthy (4/4 active).', 'Engine Status')">
+<i class="bi bi-cpu"></i> Worker Health: 100%
+        </button>
+</div>
+</header>
+<main class="page-container">
+<div class="page-header">
+<div>
+<h1>Automation Engine Health &amp; Safety Controls</h1>
+<p>Supervise rate limiting, queue latency, and global safety approval enforcement.</p>
+</div>
+</div>
+<div class="grid-4 mb-6">
+<div class="stat-card">
+<span class="stat-title">Active Ingest Workers</span>
+<div class="stat-value text-success">4 / 4</div>
+<span class="text-xs text-muted">Zero Failures</span>
+</div>
+<div class="stat-card">
+<span class="stat-title">Daily Submissions</span>
+<div class="stat-value text-primary">842</div>
+<span class="text-xs text-muted">Within Rate Limits</span>
+</div>
+<div class="stat-card">
+<span class="stat-title">Safety Mode Compliance</span>
+<div class="stat-value text-success">100%</div>
+<span class="text-xs text-muted">All User Approved</span>
+</div>
+<div class="stat-card">
+<span class="stat-title">Avg Draft Latency</span>
+<div class="stat-value">1.4s</div>
+<span class="text-xs text-muted">AI Tailor Response Time</span>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+
+
+
+
+</body>

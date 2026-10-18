@@ -1,0 +1,139 @@
+<body>
+<div class="app-wrapper">
+<!-- ADMIN SIDEBAR -->
+<aside class="sidebar">
+<div class="sidebar-brand">
+<a class="sidebar-logo" href="../index.html">
+<div class="sidebar-logo-badge" style="background: #EF4444;"><i class="bi bi-shield-lock-fill"></i></div>
+<span>Prep<span style="color: #F87171;">Admin</span></span>
+</a>
+</div>
+<div class="sidebar-content">
+<div class="nav-section-title">TOPICS</div>
+<ul class="sidebar-nav">
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./topics.html"><i class="bi bi-arrow-left"></i> <span>Back to Topics</span></a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./subtopics.html"><i class="bi bi-diagram-2"></i> <span>Manage Subtopics</span></a></li>
+</ul>
+</div>
+</aside>
+<!-- MAIN VIEWPORT -->
+<div class="main-wrapper">
+<header class="topbar">
+<div class="topbar-left">
+<div class="breadcrumb">
+<a href="./topics.html">Topics</a>
+<span class="breadcrumb-separator">/</span>
+<span style="color: var(--color-text-primary); font-weight: 600;">Object Oriented Programming</span>
+</div>
+</div>
+<div class="topbar-right">
+<a class="btn btn-secondary btn-sm" href="../user/topic.html?id=top-1" target="_blank">
+<i class="bi bi-eye"></i> Preview as User
+        </a>
+<button class="btn btn-primary btn-sm" onclick="saveTopic('published')">
+<i class="bi bi-cloud-upload"></i> Publish Topic
+        </button>
+</div>
+</header>
+<main class="page-container" style="max-width: 1080px;">
+<div class="page-header">
+<div>
+<h1>Topic Architecture &amp; Details</h1>
+<p>Configure curriculum metadata, subtopic trees, and SEO indexing parameters.</p>
+</div>
+</div>
+<div class="grid-3 mb-6" style="grid-template-columns: 2fr 1fr;">
+<!-- Left 2 Cols: Form -->
+<div class="d-flex flex-column gap-4">
+<!-- Basic Info -->
+<div class="card p-6">
+<h3 class="h3 mb-4">1. Basic Information</h3>
+<div class="grid-2">
+<div class="form-group">
+<label class="form-label">Topic Name <span class="required">*</span></label>
+<input class="form-control" id="top-name" required="" type="text" value="Object Oriented Programming"/>
+</div>
+<div class="form-group">
+<label class="form-label">Parent Technology</label>
+<select class="form-select" id="top-tech">
+<option selected="" value="tech-1">Python</option>
+<option value="tech-3">PostgreSQL &amp; SQL</option>
+</select>
+</div>
+</div>
+<div class="form-group">
+<label class="form-label">Slug</label>
+<input class="form-control" id="top-slug" type="text" value="object-oriented-programming"/>
+</div>
+<div class="form-group mb-0">
+<label class="form-label">Description</label>
+<textarea class="form-control" id="top-desc" rows="3">Comprehensive mastery of classes, inheritance, dunder methods, encapsulation and polymorphism in Python.</textarea>
+</div>
+</div>
+<!-- Metadata -->
+<div class="card p-6">
+<h3 class="h3 mb-4">2. Curriculum Parameters</h3>
+<div class="grid-3">
+<div class="form-group">
+<label class="form-label">Difficulty</label>
+<select class="form-select" id="top-difficulty">
+<option>Beginner</option>
+<option selected="">Intermediate</option>
+<option>Advanced</option>
+</select>
+</div>
+<div class="form-group">
+<label class="form-label">Estimated Time</label>
+<input class="form-control" id="top-time" type="text" value="45 mins"/>
+</div>
+<div class="form-group">
+<label class="form-label">Display Order</label>
+<input class="form-control" id="top-order" type="number" value="1"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Right 1 Col: Publishing & Version History -->
+<div class="d-flex flex-column gap-4">
+<div class="card p-5">
+<h3 class="h3 mb-3">Publishing Workflow</h3>
+<div class="d-flex align-items-center justify-content-between mb-3">
+<span class="text-xs text-muted">Status:</span>
+<span class="badge badge-success">Published</span>
+</div>
+<div class="d-flex align-items-center justify-content-between mb-4">
+<span class="text-xs text-muted">Last Updated:</span>
+<span class="text-xs fw-semibold">Sept 8, 2026</span>
+</div>
+<button class="btn btn-primary w-100 btn-sm mb-2" onclick="saveTopic('published')">
+<i class="bi bi-check2"></i> Update &amp; Publish
+            </button>
+<button class="btn btn-secondary w-100 btn-sm" onclick="saveTopic('draft')">
+              Save as Draft
+            </button>
+</div>
+<div class="card p-5">
+<h3 class="h3 mb-3">Version History</h3>
+<div class="d-flex flex-column gap-2 text-xs">
+<div class="p-2 rounded" style="background: var(--color-background-subtle);">
+<strong>v2.1 (Current)</strong>
+<div class="text-muted">Updated C3 Linearization diagram by Alexander W.</div>
+</div>
+<div class="p-2 rounded" style="background: var(--color-background-subtle);">
+<strong>v2.0</strong>
+<div class="text-muted">Added MRO execution tests</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+
+
+
+
+
+</body>

@@ -1,0 +1,60 @@
+<body>
+<div class="app-wrapper">
+<!-- ADMIN SIDEBAR -->
+<aside class="sidebar">
+<div class="sidebar-brand">
+<a class="sidebar-logo" href="../index.html">
+<div class="sidebar-logo-badge" style="background: #EF4444;"><i class="bi bi-shield-lock-fill"></i></div>
+<span>Prep<span style="color: #F87171;">Admin</span></span>
+</a>
+<span class="badge badge-danger" style="font-size: 10px;">CMS</span>
+</div>
+<div class="sidebar-content">
+<div class="nav-section-title">CONTENT MANAGEMENT</div>
+<ul class="sidebar-nav">
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./dashboard.html"><i class="bi bi-speedometer2"></i> Dashboard</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./topics.html"><i class="bi bi-layers"></i> Topics</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link active" href="./subtopics.html"><i class="bi bi-diagram-2"></i> Subtopics</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./content.html"><i class="bi bi-file-earmark-richtext"></i> Content Library</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./questions.html"><i class="bi bi-question-circle"></i> Question Bank</a></li>
+</ul>
+</div>
+</aside>
+<!-- MAIN VIEWPORT -->
+<div class="main-wrapper">
+<header class="topbar">
+<div class="topbar-left">
+<div class="breadcrumb">
+<a href="./topics.html">Topics</a>
+<span class="breadcrumb-separator">/</span>
+<span style="color: var(--color-text-primary); font-weight: 600;">Subtopics Hierarchy Ordering</span>
+</div>
+</div>
+<div class="topbar-right">
+<button class="btn btn-primary btn-sm" onclick="Toast.success('Subtopic order saved to database.', 'Order Saved')">
+<i class="bi bi-floppy"></i> Save Sequence Order
+        </button>
+</div>
+</header>
+<main class="page-container" style="max-width: 900px;">
+<div class="page-header">
+<div>
+<h1>Subtopic Reordering &amp; Hierarchy</h1>
+<p>Organize hierarchical subtopics under <strong>Python → Object Oriented Programming</strong>.</p>
+</div>
+</div>
+<div class="card p-6">
+<div class="d-flex flex-column gap-3" id="subtopics-list-tree">
+<!-- Populated from API -->
+</div>
+</div>
+</main>
+</div>
+</div>
+
+
+
+
+
+
+</body>

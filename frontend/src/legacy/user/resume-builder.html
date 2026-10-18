@@ -1,0 +1,158 @@
+<body>
+<div class="app-wrapper">
+<!-- USER SIDEBAR -->
+<aside class="sidebar">
+<div class="sidebar-brand">
+<a class="sidebar-logo" href="../index.html">
+<div class="sidebar-logo-badge"><i class="bi bi-compass"></i></div>
+<span>Prep<span style="color: #38BDF8;">Pilot</span></span>
+</a>
+</div>
+<div class="sidebar-content">
+<div class="nav-section-title">RESUME BUILDER</div>
+<ul class="sidebar-nav">
+<li class="sidebar-nav-item">
+<a class="sidebar-nav-link" href="./resume.html">
+<i class="bi bi-arrow-left"></i> <span>Back to Resumes</span>
+</a>
+</li>
+</ul>
+<div class="nav-section-title">SECTIONS</div>
+<ul class="sidebar-nav">
+<li class="sidebar-nav-item"><a class="sidebar-nav-link active" href="#sec-personal"><i class="bi bi-person"></i> Personal Info</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="#sec-summary"><i class="bi bi-card-text"></i> Summary</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="#sec-skills"><i class="bi bi-tools"></i> Core Skills</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="#sec-experience"><i class="bi bi-briefcase"></i> Experience</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="#sec-education"><i class="bi bi-mortarboard"></i> Education</a></li>
+</ul>
+</div>
+</aside>
+<!-- MAIN VIEWPORT -->
+<div class="main-wrapper">
+<header class="topbar">
+<div class="topbar-left">
+<div class="breadcrumb">
+<a href="./resume.html">Resumes</a>
+<span class="breadcrumb-separator">/</span>
+<span style="color: var(--color-text-primary); font-weight: 600;">Live Builder: Senior Python Engineer</span>
+</div>
+</div>
+<div class="topbar-right">
+<span class="badge badge-success mr-2"><i class="bi bi-check2"></i> ATS Score: 92%</span>
+<button class="btn btn-secondary btn-sm" onclick="Toast.info('Preview formatted for standard letter print.', 'Print Ready')">
+<i class="bi bi-printer"></i> Print / PDF
+        </button>
+<button class="btn btn-primary btn-sm" onclick="saveResume()">
+<i class="bi bi-floppy"></i> Save Resume
+        </button>
+</div>
+</header>
+<main class="page-container" style="max-width: 1540px;">
+<!-- TWO COLUMN RESUME BUILDER GRID -->
+<div class="resume-builder-grid">
+<!-- LEFT COLUMN: EDITABLE FORMS -->
+<div>
+<!-- Personal Info -->
+<div class="card p-5 mb-4" id="sec-personal">
+<h3 class="h3 mb-3"><i class="bi bi-person text-primary"></i> Contact &amp; Header Details</h3>
+<div class="grid-2">
+<div class="form-group">
+<label class="form-label">Full Name</label>
+<input class="form-control" id="inp-name" oninput="updateLivePreview()" type="text" value="Alex Johnson"/>
+</div>
+<div class="form-group">
+<label class="form-label">Target Title</label>
+<input class="form-control" id="inp-title" oninput="updateLivePreview()" type="text" value="Senior Backend &amp; Distributed Systems Engineer"/>
+</div>
+<div class="form-group">
+<label class="form-label">Email</label>
+<input class="form-control" id="inp-email" oninput="updateLivePreview()" type="email" value="alex.j@example.com"/>
+</div>
+<div class="form-group">
+<label class="form-label">Phone &amp; Location</label>
+<input class="form-control" id="inp-phone" oninput="updateLivePreview()" type="text" value="+1 (555) 234-8901 • San Francisco, CA"/>
+</div>
+</div>
+</div>
+<!-- Summary -->
+<div class="card p-5 mb-4" id="sec-summary">
+<h3 class="h3 mb-3"><i class="bi bi-card-text text-primary"></i> Professional Summary</h3>
+<div class="form-group mb-0">
+<textarea class="form-control" id="inp-summary" oninput="updateLivePreview()" rows="4">Results-driven Senior Backend Engineer with 6+ years designing high-throughput distributed systems in Python, FastAPI, PostgreSQL, and AWS. Proven track record optimizing database queries reducing latency by 45% for 4M+ daily active users.</textarea>
+</div>
+</div>
+<!-- Skills -->
+<div class="card p-5 mb-4" id="sec-skills">
+<h3 class="h3 mb-3"><i class="bi bi-tools text-primary"></i> Technical Skills</h3>
+<div class="form-group mb-0">
+<label class="form-label">Comma-Separated Skills</label>
+<input class="form-control" id="inp-skills" oninput="updateLivePreview()" type="text" value="Python, FastAPI, Django, PostgreSQL, Redis, Docker, Kubernetes, AWS, System Design, CI/CD"/>
+</div>
+</div>
+<!-- Experience Item -->
+<div class="card p-5 mb-4" id="sec-experience">
+<div class="d-flex justify-content-between align-items-center mb-3">
+<h3 class="h3 m-0"><i class="bi bi-briefcase text-primary"></i> Professional Experience</h3>
+<button class="btn btn-secondary btn-sm" onclick="Toast.info('Added new experience block template.', 'Section Added')">+ Add Role</button>
+</div>
+<div class="p-3 rounded mb-3" style="background: var(--color-background-subtle); border: 1px solid var(--color-border);">
+<div class="grid-2 mb-2">
+<input class="form-control" id="inp-exp-company" oninput="updateLivePreview()" type="text" value="FinScale Technologies"/>
+<input class="form-control" id="inp-exp-role" oninput="updateLivePreview()" type="text" value="Senior Backend Engineer (2023 - Present)"/>
+</div>
+<textarea class="form-control" id="inp-exp-points" oninput="updateLivePreview()" rows="3">• Architected async payment processing microservice handling 15,000 req/sec with 99.99% uptime SLA.
+• Refactored legacy PostgreSQL queries and implemented Redis caching reducing p99 latency by 45%.
+• Mentored 5 mid-level engineers and spearheaded automated CI/CD deployment pipelines on AWS.</textarea>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: LIVE ATS PREVIEW SHEET -->
+<div style="position: sticky; top: 80px;">
+<div class="d-flex justify-content-between align-items-center mb-2">
+<span class="text-xs text-muted fw-semibold"><i class="bi bi-eye"></i> LIVE ATS DOCUMENT PREVIEW</span>
+<span class="badge badge-success">ATS Optimized</span>
+</div>
+<div class="resume-preview-sheet">
+<div class="resume-sheet-header text-center">
+<h2 id="prev-name" style="font-size: 24px; font-weight: 800; color: #0F172A; margin-bottom: 2px;">Alex Johnson</h2>
+<div id="prev-title" style="font-size: 14px; font-weight: 600; color: #3157D5; margin-bottom: 6px;">Senior Backend &amp; Distributed Systems Engineer</div>
+<div id="prev-contact" style="font-size: 12px; color: #64748B;">alex.j@example.com • +1 (555) 234-8901 • San Francisco, CA</div>
+</div>
+<div class="resume-section-title">PROFESSIONAL SUMMARY</div>
+<p id="prev-summary" style="font-size: 13px; line-height: 1.5; color: #334155; margin-bottom: 12px;">
+              Results-driven Senior Backend Engineer with 6+ years designing high-throughput distributed systems in Python, FastAPI, PostgreSQL, and AWS. Proven track record optimizing database queries reducing latency by 45% for 4M+ daily active users.
+            </p>
+<div class="resume-section-title">CORE TECHNICAL EXPERTISE</div>
+<p id="prev-skills" style="font-size: 12px; line-height: 1.6; color: #334155; font-weight: 500; margin-bottom: 12px;">
+              Python, FastAPI, Django, PostgreSQL, Redis, Docker, Kubernetes, AWS, System Design, CI/CD
+            </p>
+<div class="resume-section-title">PROFESSIONAL EXPERIENCE</div>
+<div id="prev-exp">
+<div class="d-flex justify-content-between" style="font-weight: 700; font-size: 13px; color: #0F172A;">
+<span id="prev-exp-company">FinScale Technologies</span>
+<span id="prev-exp-role" style="color: #64748B; font-weight: 500;">Senior Backend Engineer (2023 - Present)</span>
+</div>
+<div id="prev-exp-points" style="font-size: 12px; color: #334155; line-height: 1.6; margin-top: 4px; white-space: pre-line;">
+                • Architected async payment processing microservice handling 15,000 req/sec with 99.99% uptime SLA.
+                • Refactored legacy PostgreSQL queries and implemented Redis caching reducing p99 latency by 45%.
+                • Mentored 5 mid-level engineers and spearheaded automated CI/CD deployment pipelines on AWS.
+              </div>
+</div>
+<div class="resume-section-title">EDUCATION</div>
+<div class="d-flex justify-content-between" style="font-size: 12px;">
+<strong>B.S. in Computer Science — University of California, Berkeley</strong>
+<span class="text-muted">2016 - 2020</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+
+
+
+
+
+</body>

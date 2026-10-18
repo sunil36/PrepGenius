@@ -1,0 +1,75 @@
+<body>
+<div class="app-wrapper">
+<!-- ADMIN SIDEBAR -->
+<aside class="sidebar">
+<div class="sidebar-brand">
+<a class="sidebar-logo" href="../index.html">
+<div class="sidebar-logo-badge" style="background: #EF4444;"><i class="bi bi-shield-lock-fill"></i></div>
+<span>Prep<span style="color: #F87171;">Admin</span></span>
+</a>
+<span class="badge badge-danger" style="font-size: 10px;">CMS</span>
+</div>
+<div class="sidebar-content">
+<div class="nav-section-title">CONTENT MANAGEMENT</div>
+<ul class="sidebar-nav">
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./dashboard.html"><i class="bi bi-speedometer2"></i> Dashboard</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./topics.html"><i class="bi bi-layers"></i> Topics</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./subtopics.html"><i class="bi bi-diagram-2"></i> Subtopics</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link active" href="./content.html"><i class="bi bi-file-earmark-richtext"></i> Content Library</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./questions.html"><i class="bi bi-question-circle"></i> Question Bank</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./mcqs.html"><i class="bi bi-ui-checks"></i> MCQs</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./coding-problems.html"><i class="bi bi-code-square"></i> Coding Problems</a></li>
+</ul>
+</div>
+</aside>
+<!-- MAIN VIEWPORT -->
+<div class="main-wrapper">
+<header class="topbar">
+<div class="topbar-left">
+<div class="breadcrumb">
+<a href="./dashboard.html">CMS</a>
+<span class="breadcrumb-separator">/</span>
+<span style="color: var(--color-text-primary); font-weight: 600;">Rich Content Library</span>
+</div>
+</div>
+<div class="topbar-right">
+<a class="btn btn-primary btn-sm" href="./content-editor.html">
+<i class="bi bi-plus-lg"></i> + Write Content
+        </a>
+</div>
+</header>
+<main class="page-container">
+<div class="page-header">
+<div>
+<h1>Technical Notes &amp; Rich Content</h1>
+<p>Curate architectural deep-dives, diagrams, code implementations, and interview guides.</p>
+</div>
+</div>
+<div class="table-container mb-6">
+<table class="table">
+<thead>
+<tr>
+<th>Title &amp; Topic</th>
+<th>Content Type</th>
+<th>Difficulty</th>
+<th>Author</th>
+<th>Status</th>
+<th>Updated</th>
+<th style="text-align: right;">Actions</th>
+</tr>
+</thead>
+<tbody id="content-table-body">
+<!-- Populated via API -->
+</tbody>
+</table>
+</div>
+</main>
+</div>
+</div>
+
+
+
+
+
+
+</body>

@@ -1,0 +1,103 @@
+<body>
+<div class="app-wrapper">
+<!-- USER SIDEBAR -->
+<aside class="sidebar">
+<div class="sidebar-brand">
+<a class="sidebar-logo" href="../index.html">
+<div class="sidebar-logo-badge"><i class="bi bi-compass"></i></div>
+<span>Prep<span style="color: #38BDF8;">Pilot</span></span>
+</a>
+<span class="badge badge-primary" style="font-size: 10px;">User</span>
+</div>
+<div class="sidebar-content">
+<div class="nav-section-title">CAREER &amp; AUTOMATION</div>
+<ul class="sidebar-nav">
+<li class="sidebar-nav-item">
+<a class="sidebar-nav-link" href="./dashboard.html"><i class="bi bi-grid-1x2"></i> <span>Dashboard</span></a>
+</li>
+<li class="sidebar-nav-item">
+<a class="sidebar-nav-link active" href="./resume.html"><i class="bi bi-file-earmark-person"></i> <span>Resumes &amp; ATS</span></a>
+</li>
+<li class="sidebar-nav-item">
+<a class="sidebar-nav-link" href="./jobs.html"><i class="bi bi-briefcase"></i> <span>Find Jobs</span></a>
+</li>
+<li class="sidebar-nav-item">
+<a class="sidebar-nav-link" href="./automation.html"><i class="bi bi-robot"></i> <span>Auto-Apply Rules</span></a>
+</li>
+<li class="sidebar-nav-item">
+<a class="sidebar-nav-link" href="./applications.html"><i class="bi bi-kanban"></i> <span>Applications Tracker</span></a>
+</li>
+</ul>
+</div>
+</aside>
+<!-- MAIN VIEWPORT -->
+<div class="main-wrapper">
+<header class="topbar">
+<div class="topbar-left">
+<div class="breadcrumb">
+<a href="./dashboard.html">Home</a>
+<span class="breadcrumb-separator">/</span>
+<span style="color: var(--color-text-primary); font-weight: 500;">Resume Management &amp; ATS Analyzer</span>
+</div>
+</div>
+<div class="topbar-right">
+<a class="btn btn-primary btn-sm" href="./resume-builder.html">
+<i class="bi bi-plus-lg"></i> Build New Resume
+        </a>
+</div>
+</header>
+<main class="page-container">
+<div class="page-header">
+<div>
+<h1>Tailored Resumes &amp; ATS Scoring</h1>
+<p>Create role-specific resumes optimized for algorithmic screening engines and hiring managers.</p>
+</div>
+<div class="page-header-actions">
+<button class="btn btn-secondary btn-sm" onclick="Toast.info('Upload PDF parsing parser ready for API integration.', 'Upload Ready')">
+<i class="bi bi-upload"></i> Upload Existing PDF
+          </button>
+</div>
+</div>
+<!-- Resume List -->
+<div class="d-flex flex-column gap-4 mb-6" id="resume-cards-list">
+<!-- Rendered via JS -->
+</div>
+<!-- ATS Recommendations Card -->
+<div class="card p-6">
+<div class="d-flex align-items-center gap-3 mb-4">
+<div style="width: 44px; height: 44px; border-radius: 8px; background: #ECFDF5; color: #10B981; display: flex; align-items: center; justify-content: center; font-size: 22px;">
+<i class="bi bi-shield-check"></i>
+</div>
+<div>
+<h2 style="font-size: 18px; font-weight: 700; margin: 0;">AI ATS Optimization Insights</h2>
+<div class="text-xs text-muted">Analysis of your active default resume for Senior Backend roles</div>
+</div>
+</div>
+<div class="grid-3 mb-4">
+<div class="p-4 rounded" style="background: var(--color-background-subtle); border: 1px solid var(--color-border);">
+<div class="text-xs text-muted fw-semibold">KEYWORD DENSITY</div>
+<div class="fw-bold" style="font-size: 24px; color: var(--color-success);">89%</div>
+<div class="text-xs text-secondary mt-1">Found 18/20 critical keywords (FastAPI, Redis, PostgreSQL, AWS)</div>
+</div>
+<div class="p-4 rounded" style="background: var(--color-background-subtle); border: 1px solid var(--color-border);">
+<div class="text-xs text-muted fw-semibold">ACTION VERB IMPACT</div>
+<div class="fw-bold" style="font-size: 24px; color: var(--color-primary);">94%</div>
+<div class="text-xs text-secondary mt-1">High proportion of metrics-driven quantifiable achievements</div>
+</div>
+<div class="p-4 rounded" style="background: var(--color-background-subtle); border: 1px solid var(--color-border);">
+<div class="text-xs text-muted fw-semibold">PARSABILITY SCORE</div>
+<div class="fw-bold" style="font-size: 24px; color: var(--color-success);">100%</div>
+<div class="text-xs text-secondary mt-1">Single-column clean structure, zero parsing tables or graphical artifacts</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+
+
+
+
+
+</body>

@@ -1,0 +1,74 @@
+<body>
+<div class="app-wrapper">
+<!-- ADMIN SIDEBAR -->
+<aside class="sidebar">
+<div class="sidebar-brand">
+<a class="sidebar-logo" href="../index.html">
+<div class="sidebar-logo-badge" style="background: #EF4444;"><i class="bi bi-shield-lock-fill"></i></div>
+<span>Prep<span style="color: #F87171;">Admin</span></span>
+</a>
+</div>
+<div class="sidebar-content">
+<div class="nav-section-title">LEARNING PATHS</div>
+<ul class="sidebar-nav">
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./learning-paths.html"><i class="bi bi-arrow-left"></i> <span>Back to Paths</span></a></li>
+</ul>
+</div>
+</aside>
+<!-- MAIN VIEWPORT -->
+<div class="main-wrapper">
+<header class="topbar">
+<div class="topbar-left">
+<div class="breadcrumb">
+<a href="./learning-paths.html">Learning Paths</a>
+<span class="breadcrumb-separator">/</span>
+<span style="color: var(--color-text-primary); font-weight: 600;">Path Curriculum Builder</span>
+</div>
+</div>
+<div class="topbar-right">
+<button class="btn btn-primary btn-sm" onclick="savePath()">
+<i class="bi bi-floppy"></i> Save Curriculum
+        </button>
+</div>
+</header>
+<main class="page-container" style="max-width: 960px;">
+<div class="page-header">
+<div>
+<h1>Create / Edit Career Learning Path</h1>
+<p>Assemble sequential milestone modules, prerequisites, and target roles.</p>
+</div>
+</div>
+<div class="card p-6 mb-4">
+<div class="form-group">
+<label class="form-label">Learning Path Title <span class="required">*</span></label>
+<input class="form-control" id="path-title" required="" type="text" value="Senior Python Backend Architect"/>
+</div>
+<div class="grid-2">
+<div class="form-group">
+<label class="form-label">Estimated Hours</label>
+<input class="form-control" id="path-hours" type="text" value="48 Hours"/>
+</div>
+<div class="form-group">
+<label class="form-label">Badge Ribbon</label>
+<input class="form-control" id="path-badge" type="text" value="Popular"/>
+</div>
+</div>
+<div class="form-group">
+<label class="form-label">Description</label>
+<textarea class="form-control" id="path-desc" rows="3">From core Python internals to High-Throughput FastAPI Microservices, Distributed Caching, and AWS Deployment.</textarea>
+</div>
+<div class="d-flex justify-content-end gap-2 pt-4" style="border-top: 1px solid var(--color-divider);">
+<a class="btn btn-secondary btn-sm" href="./learning-paths.html">Cancel</a>
+<button class="btn btn-primary btn-sm" onclick="savePath()"><i class="bi bi-floppy"></i> Save Path</button>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+
+
+
+
+
+</body>

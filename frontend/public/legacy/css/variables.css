@@ -1,0 +1,138 @@
+/* ==========================================================================
+   PREPPILOT ENTERPRISE DESIGN SYSTEM - CSS VARIABLES & THEME TOKENS
+   ========================================================================== */
+
+:root {
+  /* --- Brand & Primary Colors --- */
+  --color-primary: #3157D5;
+  --color-primary-hover: #2546BE;
+  --color-primary-active: #1C389E;
+  --color-primary-light: #EEF2FF;
+  --color-primary-light-hover: #E0E7FF;
+  --color-primary-border: #C7D2FE;
+  
+  /* --- Neutral & Surface Palette --- */
+  --color-background: #F8F9FC;
+  --color-background-subtle: #F1F3F9;
+  --color-surface: #FFFFFF;
+  --color-surface-hover: #F8FAFC;
+  --color-surface-active: #F1F5F9;
+  
+  /* --- Borders & Dividers --- */
+  --color-border: #E2E8F0;
+  --color-border-subtle: #EDF2F7;
+  --color-border-strong: #CBD5E1;
+  --color-divider: #EAECF0;
+  
+  /* --- Typography Colors --- */
+  --color-text-primary: #0F172A;
+  --color-text-secondary: #475569;
+  --color-text-muted: #94A3B8;
+  --color-text-inverse: #FFFFFF;
+  --color-text-brand: #3157D5;
+  
+  /* --- Semantic Status Colors --- */
+  --color-success: #10B981;
+  --color-success-light: #ECFDF5;
+  --color-success-border: #A7F3D0;
+  --color-success-dark: #047857;
+
+  --color-warning: #F59E0B;
+  --color-warning-light: #FFFBEB;
+  --color-warning-border: #FDE68A;
+  --color-warning-dark: #B45309;
+
+  --color-danger: #EF4444;
+  --color-danger-light: #FEF2F2;
+  --color-danger-border: #FECACA;
+  --color-danger-dark: #B91C1C;
+
+  --color-info: #0EA5E9;
+  --color-info-light: #F0F9FF;
+  --color-info-border: #BAE6FD;
+  --color-info-dark: #0369A1;
+
+  /* --- Sidebar Tokens --- */
+  --color-sidebar-bg: #0F172A;
+  --color-sidebar-surface: #1E293B;
+  --color-sidebar-hover: #1E293B;
+  --color-sidebar-active: #3157D5;
+  --color-sidebar-border: #1E293B;
+  --color-sidebar-text: #94A3B8;
+  --color-sidebar-text-active: #FFFFFF;
+  --color-sidebar-heading: #64748B;
+
+  /* --- Radii Tokens --- */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 18px;
+  --radius-full: 9999px;
+
+  /* --- Elevation & Shadow Tokens --- */
+  --shadow-xs: 0 1px 2px 0 rgba(16, 24, 40, 0.04);
+  --shadow-sm: 0 1px 3px 0 rgba(16, 24, 40, 0.08), 0 1px 2px -1px rgba(16, 24, 40, 0.05);
+  --shadow-md: 0 4px 12px -2px rgba(16, 24, 40, 0.08), 0 2px 6px -2px rgba(16, 24, 40, 0.04);
+  --shadow-lg: 0 12px 24px -4px rgba(16, 24, 40, 0.1), 0 4px 8px -2px rgba(16, 24, 40, 0.04);
+  --shadow-xl: 0 20px 32px -6px rgba(16, 24, 40, 0.12), 0 8px 12px -4px rgba(16, 24, 40, 0.06);
+
+  /* --- Spacing Scale --- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  /* --- Layout Sizing --- */
+  --sidebar-width: 260px;
+  --sidebar-collapsed-width: 74px;
+  --topbar-height: 64px;
+  --content-max-width: 1440px;
+
+  /* --- Typography Scale --- */
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', Consolas, Monaco, monospace;
+  
+  --font-size-display: 36px;
+  --font-size-h1: 28px;
+  --font-size-h2: 20px;
+  --font-size-h3: 16px;
+  --font-size-body: 14px;
+  --font-size-sm: 13px;
+  --font-size-xs: 11px;
+
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.625;
+
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 250ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* --- Dark Theme Support (Auto Swapped via html[data-theme="dark"]) --- */
+html[data-theme="dark"] {
+  --color-background: #0B0F19;
+  --color-background-subtle: #151C2C;
+  --color-surface: #111827;
+  --color-surface-hover: #1F2937;
+  --color-surface-active: #374151;
+  
+  --color-border: #1F2937;
+  --color-border-subtle: #1E293B;
+  --color-border-strong: #374151;
+  --color-divider: #1F2937;
+  
+  --color-text-primary: #F9FAFB;
+  --color-text-secondary: #9CA3AF;
+  --color-text-muted: #6B7280;
+  
+  --color-primary-light: #1E293B;
+  --color-primary-border: #3157D5;
+}

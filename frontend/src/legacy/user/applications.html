@@ -1,0 +1,136 @@
+<body>
+<div class="app-wrapper">
+<!-- USER SIDEBAR -->
+<aside class="sidebar">
+<div class="sidebar-brand">
+<a class="sidebar-logo" href="../index.html">
+<div class="sidebar-logo-badge"><i class="bi bi-compass"></i></div>
+<span>Prep<span style="color: #38BDF8;">Pilot</span></span>
+</a>
+<span class="badge badge-primary" style="font-size: 10px;">User</span>
+</div>
+<div class="sidebar-content">
+<div class="nav-section-title">CAREER &amp; AUTOMATION</div>
+<ul class="sidebar-nav">
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./dashboard.html"><i class="bi bi-grid-1x2"></i> Dashboard</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./resume.html"><i class="bi bi-file-earmark-person"></i> Resumes &amp; ATS</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./jobs.html"><i class="bi bi-briefcase"></i> Find Jobs</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./automation.html"><i class="bi bi-robot"></i> Auto-Apply Rules</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link active" href="./applications.html"><i class="bi bi-kanban"></i> Applications Tracker</a></li>
+</ul>
+</div>
+</aside>
+<!-- MAIN VIEWPORT -->
+<div class="main-wrapper">
+<header class="topbar">
+<div class="topbar-left">
+<div class="breadcrumb">
+<a href="./dashboard.html">Home</a>
+<span class="breadcrumb-separator">/</span>
+<span style="color: var(--color-text-primary); font-weight: 500;">Applications Pipeline Kanban</span>
+</div>
+</div>
+<div class="topbar-right">
+<button class="btn btn-primary btn-sm" onclick="addNewApplicationPrompt()">
+<i class="bi bi-plus-lg"></i> Add Application
+        </button>
+</div>
+</header>
+<main class="page-container" style="max-width: 100%;">
+<div class="page-header">
+<div>
+<h1>Interactive Application Pipeline</h1>
+<p>Track your active candidate pipelines, recruiter rounds, and interview milestones.</p>
+</div>
+</div>
+<!-- KANBAN BOARD -->
+<div class="kanban-board" id="kanban-container">
+<!-- SAVED -->
+<div class="kanban-column">
+<div class="kanban-column-header">
+<span>Saved Roles</span>
+<span class="badge badge-neutral" id="cnt-saved">1</span>
+</div>
+<div class="kanban-column-body" id="col-saved">
+<div class="kanban-card" onclick="window.location.href='./application-detail.html'">
+<div class="d-flex justify-content-between align-items-center mb-1">
+<strong class="text-sm">Airbnb</strong>
+<span class="badge badge-primary">90%</span>
+</div>
+<div class="text-xs text-secondary mb-2">Senior Platform Engineer</div>
+<div class="text-xs text-muted"><i class="bi bi-clock"></i> Tailoring resume</div>
+</div>
+</div>
+</div>
+<!-- APPLIED -->
+<div class="kanban-column">
+<div class="kanban-column-header">
+<span>Applied</span>
+<span class="badge badge-neutral" id="cnt-applied">1</span>
+</div>
+<div class="kanban-column-body" id="col-applied">
+<div class="kanban-card" onclick="window.location.href='./application-detail.html'">
+<div class="d-flex justify-content-between align-items-center mb-1">
+<strong class="text-sm">Datadog</strong>
+<span class="badge badge-primary">88%</span>
+</div>
+<div class="text-xs text-secondary mb-2">Staff Software Engineer</div>
+<div class="text-xs text-muted"><i class="bi bi-calendar"></i> Applied Sept 7</div>
+</div>
+</div>
+</div>
+<!-- SCREENING -->
+<div class="kanban-column">
+<div class="kanban-column-header">
+<span>Screening</span>
+<span class="badge badge-neutral" id="cnt-screening">1</span>
+</div>
+<div class="kanban-column-body" id="col-screening">
+<div class="kanban-card" onclick="window.location.href='./application-detail.html'">
+<div class="d-flex justify-content-between align-items-center mb-1">
+<strong class="text-sm">Stripe</strong>
+<span class="badge badge-success">94%</span>
+</div>
+<div class="text-xs text-secondary mb-2">Senior Python Backend</div>
+<div class="text-xs text-warning"><i class="bi bi-telephone"></i> Call Tomorrow 2PM</div>
+</div>
+</div>
+</div>
+<!-- INTERVIEW -->
+<div class="kanban-column">
+<div class="kanban-column-header">
+<span>Interview</span>
+<span class="badge badge-success" id="cnt-interview">1</span>
+</div>
+<div class="kanban-column-body" id="col-interview">
+<div class="kanban-card" onclick="window.location.href='./application-detail.html'" style="border-left: 3px solid var(--color-success);">
+<div class="d-flex justify-content-between align-items-center mb-1">
+<strong class="text-sm">Scale AI</strong>
+<span class="badge badge-success">96%</span>
+</div>
+<div class="text-xs text-secondary mb-2">Lead Backend Developer</div>
+<div class="text-xs text-success fw-semibold"><i class="bi bi-camera-video"></i> System Design (Friday)</div>
+</div>
+</div>
+</div>
+<!-- OFFER -->
+<div class="kanban-column">
+<div class="kanban-column-header">
+<span>Offer Received</span>
+<span class="badge badge-neutral">0</span>
+</div>
+<div class="kanban-column-body" id="col-offer">
+<div class="text-xs text-muted text-center p-4">No active offers yet</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+
+
+
+
+
+</body>

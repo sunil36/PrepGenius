@@ -1,0 +1,85 @@
+<body>
+<div class="app-wrapper">
+<!-- ADMIN SIDEBAR -->
+<aside class="sidebar">
+<div class="sidebar-brand">
+<a class="sidebar-logo" href="../index.html">
+<div class="sidebar-logo-badge" style="background: #EF4444;"><i class="bi bi-shield-lock-fill"></i></div>
+<span>Prep<span style="color: #F87171;">Admin</span></span>
+</a>
+</div>
+<div class="sidebar-content">
+<div class="nav-section-title">CODING CMS</div>
+<ul class="sidebar-nav">
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./coding-problems.html"><i class="bi bi-arrow-left"></i> <span>Back to Coding Problems</span></a></li>
+</ul>
+</div>
+</aside>
+<!-- MAIN VIEWPORT -->
+<div class="main-wrapper">
+<header class="topbar">
+<div class="topbar-left">
+<div class="breadcrumb">
+<a href="./coding-problems.html">Coding Problems</a>
+<span class="breadcrumb-separator">/</span>
+<span style="color: var(--color-text-primary); font-weight: 600;">Singleton Metaclass</span>
+</div>
+</div>
+<div class="topbar-right">
+<button class="btn btn-primary btn-sm" onclick="saveProblem()">
+<i class="bi bi-floppy"></i> Save Coding Problem
+        </button>
+</div>
+</header>
+<main class="page-container" style="max-width: 1040px;">
+<div class="page-header">
+<div>
+<h1>Create / Edit Coding Challenge</h1>
+<p>Configure problem statement, constraints, starter template, and reference solution.</p>
+</div>
+</div>
+<div class="card p-6 mb-4">
+<div class="grid-2">
+<div class="form-group">
+<label class="form-label">Problem Title <span class="required">*</span></label>
+<input class="form-control" required="" type="text" value="Implement a Thread-Safe Singleton Metaclass"/>
+</div>
+<div class="form-group">
+<label class="form-label">Difficulty</label>
+<select class="form-select">
+<option>Easy</option>
+<option>Medium</option>
+<option selected="">Hard</option>
+</select>
+</div>
+</div>
+<div class="form-group">
+<label class="form-label">Problem Description</label>
+<textarea class="form-control" rows="3">Create a metaclass SingletonMeta in Python that ensures only one instance of any class using it as its metaclass can ever be created, even under high concurrent multi-threaded access.</textarea>
+</div>
+<div class="form-group">
+<label class="form-label">Starter Boilerplate Code</label>
+<div class="code-editor-box">
+<div class="code-editor-header"><span>starter.py</span></div>
+<textarea class="code-editor-textarea" rows="6">import threading
+
+class SingletonMeta(type):
+    _instances = {}
+    _lock = threading.Lock()
+
+    def __call__(cls, *args, **kwargs):
+        # Implement thread-safe double-checked locking here
+        pass</textarea>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+
+
+
+
+
+</body>

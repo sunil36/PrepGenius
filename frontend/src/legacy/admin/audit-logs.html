@@ -1,0 +1,72 @@
+<body>
+<div class="app-wrapper">
+<!-- ADMIN SIDEBAR -->
+<aside class="sidebar">
+<div class="sidebar-brand">
+<a class="sidebar-logo" href="../index.html">
+<div class="sidebar-logo-badge" style="background: #EF4444;"><i class="bi bi-shield-lock-fill"></i></div>
+<span>Prep<span style="color: #F87171;">Admin</span></span>
+</a>
+<span class="badge badge-danger" style="font-size: 10px;">CMS</span>
+</div>
+<div class="sidebar-content">
+<div class="nav-section-title">AUDIT &amp; ANALYTICS</div>
+<ul class="sidebar-nav">
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./dashboard.html"><i class="bi bi-speedometer2"></i> Dashboard</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./analytics.html"><i class="bi bi-graph-up"></i> Analytics</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./reports.html"><i class="bi bi-file-earmark-bar-graph"></i> Reports</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link active" href="./audit-logs.html"><i class="bi bi-journal-check"></i> Audit Logs</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./settings.html"><i class="bi bi-gear"></i> Settings</a></li>
+</ul>
+</div>
+</aside>
+<!-- MAIN VIEWPORT -->
+<div class="main-wrapper">
+<header class="topbar">
+<div class="topbar-left">
+<div class="breadcrumb">
+<a href="./dashboard.html">CMS</a>
+<span class="breadcrumb-separator">/</span>
+<span style="color: var(--color-text-primary); font-weight: 600;">Security Audit Trail</span>
+</div>
+</div>
+<div class="topbar-right">
+<button class="btn btn-secondary btn-sm" onclick="Toast.info('Audit trail exported.', 'Exported')">
+<i class="bi bi-download"></i> Export Logs
+        </button>
+</div>
+</header>
+<main class="page-container">
+<div class="page-header">
+<div>
+<h1>Platform Operations Audit Trail</h1>
+<p>Immutable record of content mutations, publishing events, user creation, and automation actions.</p>
+</div>
+</div>
+<div class="table-container mb-6">
+<table class="table">
+<thead>
+<tr>
+<th>Timestamp</th>
+<th>Actor / User</th>
+<th>Action</th>
+<th>Entity Affected</th>
+<th>State Transition</th>
+<th>IP Address</th>
+</tr>
+</thead>
+<tbody id="audit-logs-table-body">
+<!-- Populated via API -->
+</tbody>
+</table>
+</div>
+</main>
+</div>
+</div>
+
+
+
+
+
+
+</body>

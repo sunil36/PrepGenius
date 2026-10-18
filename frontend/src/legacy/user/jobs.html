@@ -1,0 +1,82 @@
+<body>
+<div class="app-wrapper">
+<!-- USER SIDEBAR -->
+<aside class="sidebar">
+<div class="sidebar-brand">
+<a class="sidebar-logo" href="../index.html">
+<div class="sidebar-logo-badge"><i class="bi bi-compass"></i></div>
+<span>Prep<span style="color: #38BDF8;">Pilot</span></span>
+</a>
+<span class="badge badge-primary" style="font-size: 10px;">User</span>
+</div>
+<div class="sidebar-content">
+<div class="nav-section-title">CAREER</div>
+<ul class="sidebar-nav">
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./dashboard.html"><i class="bi bi-grid-1x2"></i> Dashboard</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./resume.html"><i class="bi bi-file-earmark-person"></i> Resumes &amp; ATS</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link active" href="./jobs.html"><i class="bi bi-briefcase"></i> Find Jobs</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./automation.html"><i class="bi bi-robot"></i> Auto-Apply Rules</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./application-review.html"><i class="bi bi-shield-check"></i> Approval Queue</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./applications.html"><i class="bi bi-kanban"></i> Applications Tracker</a></li>
+</ul>
+</div>
+</aside>
+<!-- MAIN VIEWPORT -->
+<div class="main-wrapper">
+<header class="topbar">
+<div class="topbar-left">
+<div class="breadcrumb">
+<a href="./dashboard.html">Home</a>
+<span class="breadcrumb-separator">/</span>
+<span style="color: var(--color-text-primary); font-weight: 500;">Job Discovery &amp; Real-Time Match</span>
+</div>
+</div>
+<div class="topbar-right">
+<a class="btn btn-outline btn-sm" href="./automation.html">
+<i class="bi bi-gear"></i> Automation Preferences
+        </a>
+</div>
+</header>
+<main class="page-container">
+<div class="page-header">
+<div>
+<h1>Verified Senior Engineering Positions</h1>
+<p>Scraped directly from top engineering teams and scored against your active profile.</p>
+</div>
+</div>
+<!-- Filters Row -->
+<div class="card p-4 mb-5">
+<div class="d-flex flex-wrap gap-3 align-items-center">
+<div class="flex-grow-1" style="min-width: 240px;">
+<input class="form-control" id="job-search-input" oninput="filterJobs()" placeholder="Search by title, company, or keyword..." type="text"/>
+</div>
+<select class="form-select" style="width: auto;">
+<option>All Locations (Remote &amp; US)</option>
+<option>Remote Only</option>
+<option>San Francisco, CA</option>
+<option>New York, NY</option>
+</select>
+<select class="form-select" style="width: auto;">
+<option>Match Score: 90%+</option>
+<option>Match Score: 80%+</option>
+<option>All Matches</option>
+</select>
+<button class="btn btn-secondary btn-sm" onclick="Toast.info('Filters refreshed against live ingest feed.', 'Filters Updated')">
+<i class="bi bi-funnel"></i> Reset
+          </button>
+</div>
+</div>
+<!-- Jobs Grid / List -->
+<div class="d-flex flex-column gap-4" id="jobs-list-container">
+<!-- Rendered dynamically -->
+</div>
+</main>
+</div>
+</div>
+
+
+
+
+
+
+</body>

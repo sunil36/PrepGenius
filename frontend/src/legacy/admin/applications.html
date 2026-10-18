@@ -1,0 +1,70 @@
+<body>
+<div class="app-wrapper">
+<!-- ADMIN SIDEBAR -->
+<aside class="sidebar">
+<div class="sidebar-brand">
+<a class="sidebar-logo" href="../index.html">
+<div class="sidebar-logo-badge" style="background: #EF4444;"><i class="bi bi-shield-lock-fill"></i></div>
+<span>Prep<span style="color: #F87171;">Admin</span></span>
+</a>
+<span class="badge badge-danger" style="font-size: 10px;">CMS</span>
+</div>
+<div class="sidebar-content">
+<div class="nav-section-title">CAREER INGESTION</div>
+<ul class="sidebar-nav">
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./dashboard.html"><i class="bi bi-speedometer2"></i> Dashboard</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./jobs.html"><i class="bi bi-briefcase"></i> Job Feeds</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link active" href="./applications.html"><i class="bi bi-send"></i> Applications</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./automation.html"><i class="bi bi-robot"></i> Automation Monitor</a></li>
+</ul>
+</div>
+</aside>
+<!-- MAIN VIEWPORT -->
+<div class="main-wrapper">
+<header class="topbar">
+<div class="topbar-left">
+<div class="breadcrumb">
+<a href="./dashboard.html">CMS</a>
+<span class="breadcrumb-separator">/</span>
+<span style="color: var(--color-text-primary); font-weight: 600;">Global Applications Tracker</span>
+</div>
+</div>
+<div class="topbar-right">
+<button class="btn btn-secondary btn-sm" onclick="Toast.info('Applications export generated.', 'Exported')">
+<i class="bi bi-download"></i> Export Data
+        </button>
+</div>
+</header>
+<main class="page-container">
+<div class="page-header">
+<div>
+<h1>Platform-Wide Candidate Applications</h1>
+<p>Global monitoring of candidate applications, conversion rates across screening stages, and auto-apply submissions.</p>
+</div>
+</div>
+<div class="table-container mb-6">
+<table class="table">
+<thead>
+<tr>
+<th>Company &amp; Role</th>
+<th>Stage</th>
+<th>Match Score</th>
+<th>Applied Date</th>
+<th>Next Milestone</th>
+</tr>
+</thead>
+<tbody id="admin-apps-table-body">
+<!-- Populated via API -->
+</tbody>
+</table>
+</div>
+</main>
+</div>
+</div>
+
+
+
+
+
+
+</body>

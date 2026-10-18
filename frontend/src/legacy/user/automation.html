@@ -1,0 +1,139 @@
+<body>
+<div class="app-wrapper">
+<!-- USER SIDEBAR -->
+<aside class="sidebar">
+<div class="sidebar-brand">
+<a class="sidebar-logo" href="../index.html">
+<div class="sidebar-logo-badge"><i class="bi bi-compass"></i></div>
+<span>Prep<span style="color: #38BDF8;">Pilot</span></span>
+</a>
+<span class="badge badge-primary" style="font-size: 10px;">User</span>
+</div>
+<div class="sidebar-content">
+<div class="nav-section-title">CAREER &amp; AUTOMATION</div>
+<ul class="sidebar-nav">
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./dashboard.html"><i class="bi bi-grid-1x2"></i> Dashboard</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./resume.html"><i class="bi bi-file-earmark-person"></i> Resumes &amp; ATS</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./jobs.html"><i class="bi bi-briefcase"></i> Find Jobs</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link active" href="./automation.html"><i class="bi bi-robot"></i> Auto-Apply Rules</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./application-review.html"><i class="bi bi-shield-check"></i> Approval Queue <span class="sidebar-badge" style="background: var(--color-warning); color: #000;">2</span></a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./applications.html"><i class="bi bi-kanban"></i> Applications Tracker</a></li>
+</ul>
+</div>
+</aside>
+<!-- MAIN VIEWPORT -->
+<div class="main-wrapper">
+<header class="topbar">
+<div class="topbar-left">
+<div class="breadcrumb">
+<a href="./dashboard.html">Home</a>
+<span class="breadcrumb-separator">/</span>
+<span style="color: var(--color-text-primary); font-weight: 500;">Application Automation &amp; Safety Engine</span>
+</div>
+</div>
+<div class="topbar-right">
+<button class="btn btn-primary btn-sm" onclick="triggerImmediateScan()">
+<i class="bi bi-arrow-repeat"></i> Trigger Manual Scan Now
+        </button>
+</div>
+</header>
+<main class="page-container">
+<div class="page-header">
+<div>
+<h1>AI Job Search &amp; Application Automation</h1>
+<p>Configure automated discovery, tailored ATS response drafting, and safety approval modes.</p>
+</div>
+</div>
+<!-- SAFETY BANNER -->
+<div class="callout callout-info mb-6">
+<div class="d-flex align-items-center gap-2 mb-1">
+<strong style="font-size: 14px;"><i class="bi bi-shield-lock-fill"></i> Strict Human-in-the-Loop Safety Mode (Active)</strong>
+</div>
+<p class="text-xs mb-0" style="color: var(--color-info-dark);">
+          Applications are prepared and tailored automatically, but are queued in your <strong>Approval Queue</strong> for your 1-click inspection before submission. Automatic submission is strictly OFF by default.
+        </p>
+</div>
+<!-- Automation Stats -->
+<div class="grid-4 mb-6">
+<div class="stat-card">
+<span class="stat-title">Jobs Scanned Today</span>
+<div class="stat-value">142</div>
+<span class="text-xs text-muted">Across 3 Job Ingestors</span>
+</div>
+<div class="stat-card">
+<span class="stat-title">Matched Roles (&gt;90%)</span>
+<div class="stat-value text-success">12</div>
+<span class="text-xs text-muted">Exceeds ATS Threshold</span>
+</div>
+<div class="stat-card">
+<span class="stat-title">Awaiting Your Approval</span>
+<div class="stat-value text-warning">2</div>
+<span class="text-xs text-muted"><a class="fw-semibold" href="./application-review.html">Inspect Queue →</a></span>
+</div>
+<div class="stat-card">
+<span class="stat-title">Submitted via Automation</span>
+<div class="stat-value text-primary">8</div>
+<span class="text-xs text-muted">Within Daily Limit</span>
+</div>
+</div>
+<!-- Automation Rules Config Form -->
+<div class="card p-6 mb-6">
+<h2 style="font-size: 18px; font-weight: 700; margin-bottom: 20px;"><i class="bi bi-sliders text-primary"></i> Active Automation Rule Configuration</h2>
+<div class="grid-2">
+<div class="form-group">
+<label class="form-label">Rule Name</label>
+<input class="form-control" type="text" value="High-Match Senior Python Roles (US Remote)"/>
+</div>
+<div class="form-group">
+<label class="form-label">Target Job Titles</label>
+<input class="form-control" type="text" value="Senior Python Engineer, Senior Backend Engineer, Staff Software Engineer"/>
+</div>
+<div class="form-group">
+<label class="form-label">Target Locations</label>
+<input class="form-control" type="text" value="Remote US, San Francisco, CA, New York, NY"/>
+</div>
+<div class="form-group">
+<label class="form-label">Minimum Salary Threshold</label>
+<input class="form-control" type="text" value="$175,000 / year"/>
+</div>
+<div class="form-group">
+<label class="form-label">Minimum Resume Match Threshold</label>
+<select class="form-select">
+<option selected="">90% Match &amp; Above (Recommended)</option>
+<option>85% Match &amp; Above</option>
+<option>80% Match &amp; Above</option>
+</select>
+</div>
+<div class="form-group">
+<label class="form-label">Approval Mode</label>
+<select class="form-select">
+<option selected="">Review &amp; Approve (Safety Mode)</option>
+<option>Manual Notification Only</option>
+<option>Automatic Submission (Requires 2FA Confirmation)</option>
+</select>
+</div>
+</div>
+<div class="d-flex justify-content-between align-items-center pt-4" style="border-top: 1px solid var(--color-divider);">
+<div class="text-xs text-muted">Daily Limit: <strong>10 Applications/Day</strong> (Prevents platform spam)</div>
+<button class="btn btn-primary btn-sm" onclick="Toast.success('Automation rule preferences saved successfully.', 'Saved')">
+<i class="bi bi-floppy"></i> Save Rule Preferences
+          </button>
+</div>
+</div>
+<!-- Live Automation Activity Logs -->
+<div class="card p-6">
+<h3 class="h3 mb-4"><i class="bi bi-activity text-primary"></i> Real-Time Automation Activity Timeline</h3>
+<div class="d-flex flex-column gap-3" id="automation-logs-container">
+<!-- Populated from API -->
+</div>
+</div>
+</main>
+</div>
+</div>
+
+
+
+
+
+
+</body>

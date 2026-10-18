@@ -1,0 +1,10 @@
+@import url('/legacy/css/app.css');
+
+@import "./legacy-head.css";
+
+/* React migration additions: keep the original design system, then add small UX upgrades. */
+.react-route-loading { min-height: 100vh; display: grid; place-items: center; font-family: Inter, sans-serif; color: #64748b; }
+.react-migration-toast { position: fixed; right: 20px; bottom: 20px; z-index: 100000; background: #0f172a; color: white; padding: 10px 14px; border-radius: 10px; box-shadow: 0 10px 30px rgba(15,23,42,.2); font-size: 13px; }
+/* Make the original pages safe inside the React application root. */
+#root { min-height: 100vh; }
+

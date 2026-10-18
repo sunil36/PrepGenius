@@ -1,0 +1,121 @@
+<body>
+<div class="app-wrapper">
+<!-- USER SIDEBAR -->
+<aside class="sidebar">
+<div class="sidebar-brand">
+<a class="sidebar-logo" href="../index.html">
+<div class="sidebar-logo-badge"><i class="bi bi-compass"></i></div>
+<span>Prep<span style="color: #38BDF8;">Pilot</span></span>
+</a>
+<span class="badge badge-primary" style="font-size: 10px;">User</span>
+</div>
+<div class="sidebar-content">
+<div class="nav-section-title">CAREER &amp; AUTOMATION</div>
+<ul class="sidebar-nav">
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./dashboard.html"><i class="bi bi-grid-1x2"></i> Dashboard</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./jobs.html"><i class="bi bi-briefcase"></i> Find Jobs</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./automation.html"><i class="bi bi-robot"></i> Auto-Apply Rules</a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link active" href="./application-review.html"><i class="bi bi-shield-check"></i> Approval Queue <span class="sidebar-badge" style="background: var(--color-warning); color: #000;">2</span></a></li>
+<li class="sidebar-nav-item"><a class="sidebar-nav-link" href="./applications.html"><i class="bi bi-kanban"></i> Applications Tracker</a></li>
+</ul>
+</div>
+</aside>
+<!-- MAIN VIEWPORT -->
+<div class="main-wrapper">
+<header class="topbar">
+<div class="topbar-left">
+<div class="breadcrumb">
+<a href="./automation.html">Automation</a>
+<span class="breadcrumb-separator">/</span>
+<span style="color: var(--color-text-primary); font-weight: 500;">Application Review &amp; Approval Queue</span>
+</div>
+</div>
+<div class="topbar-right">
+<span class="badge badge-warning"><i class="bi bi-exclamation-circle"></i> 2 Applications Awaiting Approval</span>
+</div>
+</header>
+<main class="page-container" style="max-width: 1140px;">
+<div class="page-header">
+<div>
+<h1>Review &amp; Approve Applications</h1>
+<p>Inspect AI-tailored answers, verify resume fit, and approve submissions with 1-click.</p>
+</div>
+</div>
+<!-- Application 1 in Queue -->
+<div class="card p-6 mb-6" id="review-card-1">
+<div class="d-flex justify-content-between align-items-start mb-4">
+<div>
+<div class="d-flex align-items-center gap-2 mb-1">
+<h2 style="font-size: 20px; font-weight: 700; margin: 0;">Lead Backend Developer</h2>
+<span class="badge badge-success"><i class="bi bi-stars"></i> 96% Match</span>
+</div>
+<div class="text-xs text-muted">Scale AI • San Francisco, CA • $195,000 - $240,000</div>
+</div>
+<div class="d-flex gap-2">
+<button class="btn btn-danger-outline btn-sm" onclick="rejectApp('review-card-1')">
+<i class="bi bi-trash3"></i> Reject Draft
+            </button>
+<button class="btn btn-success btn-sm" onclick="approveApp('review-card-1', 'Scale AI')">
+<i class="bi bi-check2-circle"></i> Approve &amp; Submit
+            </button>
+</div>
+</div>
+<div class="form-group">
+<label class="form-label">Auto-Generated Tailored Cover Letter</label>
+<textarea class="form-control" rows="5">Dear Scale AI Engineering Hiring Team,
+
+I am writing to express my strong interest in the Lead Backend Developer position. With 6+ years specializing in asynchronous Python, FastAPI microservices, and high-volume database architecture, I have engineered payment and data processing pipelines processing over 15,000 requests/sec with sub-50ms latency.
+
+My recent experience refactoring distributed PostgreSQL queries and implementing Redis caching layers at FinScale Technologies aligns directly with Scale AI's mission to scale AI training data curation infrastructure. I welcome the opportunity to discuss how my distributed systems expertise can accelerate your backend initiatives.
+
+Sincerely,
+Alex Johnson</textarea>
+</div>
+<div class="form-group mb-0">
+<label class="form-label">Job-Specific Application Question Responses</label>
+<div class="p-3 rounded" style="background: var(--color-background-subtle); border: 1px solid var(--color-border);">
+<div class="text-xs fw-semibold text-primary mb-1">Q: How do you handle distributed lock contention in async services?</div>
+<div class="text-xs text-secondary">A: I utilize Redis Redlock algorithms combined with double-checked local locking patterns and exponential backoff retry jitter to prevent stampedes.</div>
+</div>
+</div>
+</div>
+<!-- Application 2 in Queue -->
+<div class="card p-6" id="review-card-2">
+<div class="d-flex justify-content-between align-items-start mb-4">
+<div>
+<div class="d-flex align-items-center gap-2 mb-1">
+<h2 style="font-size: 20px; font-weight: 700; margin: 0;">Senior Python Backend Engineer</h2>
+<span class="badge badge-success"><i class="bi bi-stars"></i> 94% Match</span>
+</div>
+<div class="text-xs text-muted">Stripe • San Francisco, CA / Remote • $180,000 - $225,000</div>
+</div>
+<div class="d-flex gap-2">
+<button class="btn btn-danger-outline btn-sm" onclick="rejectApp('review-card-2')">
+<i class="bi bi-trash3"></i> Reject Draft
+            </button>
+<button class="btn btn-success btn-sm" onclick="approveApp('review-card-2', 'Stripe')">
+<i class="bi bi-check2-circle"></i> Approve &amp; Submit
+            </button>
+</div>
+</div>
+<div class="form-group mb-0">
+<label class="form-label">Tailored Resume Attachment</label>
+<div class="p-3 rounded d-flex align-items-center justify-content-between" style="background: var(--color-background-subtle); border: 1px solid var(--color-border);">
+<div class="d-flex align-items-center gap-2">
+<i class="bi bi-file-earmark-pdf text-danger" style="font-size: 20px;"></i>
+<span class="text-sm fw-medium">Alex_Johnson_Stripe_Tailored_Resume.pdf</span>
+</div>
+<span class="badge badge-success">94% ATS Match</span>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+
+
+
+
+
+</body>

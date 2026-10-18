@@ -1,0 +1,32 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.venv/
+env/
+venv/
+ENV/
+
+# Configuration & Secrets
+.env
+*.local
+
+# Alembic
+alembic/versions/*.pyc
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# OS generated
+.DS_Store
+Thumbs.db

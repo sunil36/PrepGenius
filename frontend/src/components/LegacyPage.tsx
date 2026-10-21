@@ -48,13 +48,13 @@ export function LegacyPage({ section, page }: { section: string; page: string })
     setReady(false);
     const mount = async () => {
       if (!html) { setReady(true); return; }
-      // Common legacy runtime is retained only as a compatibility bridge while pages are refactored.
+      // Common legacy runtime must load first so API, MockDB, and UIComponents are defined
       for (const file of ['mock-data.js', 'api.js', 'components.js', 'notifications.js', 'app.js']) {
         await loadScript(`/legacy/js/${file}`);
       }
       if (cancelled) return;
       setReady(true);
-      // The markup is already mounted when this effect runs; allow legacy page initializers to query it.
+      // The markup and runtime are ready; execute page initializers
       if (inline.trim()) {
         try { new Function(inline)(); } catch (error) { console.error(`PrepPilot legacy initializer failed: ${section}/${page}`, error); }
       }

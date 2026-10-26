@@ -3,7 +3,7 @@ docker --version
 docker compose build
 docker compose ps
 
-
+docker compose build frontend
 docker compose logs -f backend
 docker compose up -d mysql backend
 cd e:\PrepGenius

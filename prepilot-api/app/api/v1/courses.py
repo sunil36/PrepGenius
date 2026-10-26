@@ -54,7 +54,7 @@ def get_category_by_id(id:int,db:Session=Depends(get_db)):
                             'status':200,
                             'message':"Retrive product",
                             'data':get_by_category
-                          }
+                            }
         else:
             return {
              'status':200,

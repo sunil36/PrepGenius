@@ -62,6 +62,9 @@ window.saveCategory = async function saveCategory() {
         },
         body: JSON.stringify(payload)
       });
+      if (!response.ok && response.status >= 500) {
+        throw new Error(`Proxy status: ${response.status}`);
+      }
     } catch (proxyError) {
       response = await fetch(directUrl, {
         method: method,
@@ -143,6 +146,9 @@ async function loadCategoryForEdit() {
       response = await fetch(`/api/courses/category-editor?id=${encodeURIComponent(id)}`, {
         headers: { 'Accept': 'application/json' }
       });
+      if (!response.ok && response.status >= 500) {
+        throw new Error(`Proxy status: ${response.status}`);
+      }
     } catch (proxyErr) {
       response = await fetch(`http://127.0.0.1:8080/api/courses/category-editor?id=${encodeURIComponent(id)}`, {
         headers: { 'Accept': 'application/json' }

@@ -16,10 +16,17 @@ window.loadCategories = async function loadCategories() {
       response = await fetch('/api/courses/categories', {
         headers: { 'Accept': 'application/json' }
       });
+      if (!response.ok) {
+        throw new Error(`Proxy status: ${response.status}`);
+      }
     } catch (proxyErr) {
       response = await fetch('http://127.0.0.1:8080/api/courses/categories', {
         headers: { 'Accept': 'application/json' }
       });
+    }
+
+    if (!response.ok) {
+      throw new Error(`API returned HTTP ${response.status}`);
     }
 
     const result = await response.json();

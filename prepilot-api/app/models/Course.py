@@ -1,5 +1,5 @@
 from datetime import datetime, timezone
-
+from sqlalchemy.orm import relationship
 from sqlalchemy import (
     Boolean,
     DateTime,
@@ -77,4 +77,8 @@ class Course(Base):
     deleted_at: Mapped[datetime | None] = mapped_column(
         DateTime(timezone=True),
         nullable=True,
+    )
+    technology_stacks = relationship(
+        "TechnologyStackClass",
+        back_populates="category",
     )
